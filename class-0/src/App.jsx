@@ -15,7 +15,7 @@ function App() {
   ]
 
   return (
-    <>
+    <div className="App">
       <h1>Hola mundo con React</h1>
       <p>Me llamo {nombre} y soy {profesion}</p>
 
@@ -33,7 +33,7 @@ function App() {
           <h3>{reyes[2].nombre}</h3>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
