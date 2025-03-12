@@ -1,0 +1,36 @@
+.App ul {
+	min-height: 100vh;
+	list-style: none;
+	display: flex;
+	flex-flow: column;
+	gap: 20px;
+	justify-content: center;
+	padding: 20px;
+}
+
+.App li > * {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+.App label {
+	margin-bottom: 5px;
+}
+
+.App input {
+	font-size: 18px;
+	outline: none;
+	padding: 20px;
+	border-radius: 7px;
+	background-color: darkblue;
+	color: bisque;
+	text-align: center;
+	cursor: default;
+}
+
+.App .edit {
+	background: bisque;
+	color: darkblue;
+	cursor: text;
+}
