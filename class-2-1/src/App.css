@@ -27,6 +27,8 @@
 	color: bisque;
 	text-align: center;
 	cursor: default;
+	width: 100%;
+	max-width: 250px;
 }
 
 .App .edit {
