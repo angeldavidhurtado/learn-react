@@ -50,7 +50,6 @@ function App() {
           <input value={dolar} id="dolar" type="number" readOnly />
         </li>
       </ul>
-      
     </div>
   )
 }
