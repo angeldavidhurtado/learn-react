@@ -1,6 +1,6 @@
 import './Cena.css'
 
-function MiComponente({ name="Anonymous", price=0, action=()=>{}, color }) {
+function Cena({ name="Anonymous", price=0, action=()=>{}, color }) {
 	const runAction = e => {
 		const divCena = e.target.parentElement
 		divCena.style.display = 'none'
@@ -19,4 +19,4 @@ function MiComponente({ name="Anonymous", price=0, action=()=>{}, color }) {
 	)
 }
 
-export default MiComponente
+export default Cena
