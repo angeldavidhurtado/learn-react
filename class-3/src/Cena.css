@@ -1,0 +1,23 @@
+.Cena {
+	padding: 20px;
+	border-radius: 7px;
+	text-align: center;
+	background: darkblue;
+	max-width: 300px;
+}
+
+.Cena img {
+	width: 100%;
+	vertical-align: top;
+	margin: 15px 0;
+}
+
+.Cena button {
+	background: bisque;
+	font-size: 16px;
+	color: darkblue;
+	padding: 10px 15px;
+	border-radius: 7px;
+	cursor: pointer;
+	margin-top: 8px;
+}
