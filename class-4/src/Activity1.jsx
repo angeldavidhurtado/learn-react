@@ -8,7 +8,6 @@ function Activity1({kings}) {
 			<h3>{king.name.toUpperCase()}</h3>
 			<img src={`/reyes/rey_${quitarAcentos(king.name.toLowerCase())}.png`} alt={`${king.name}`} />
 			<p>Comió {king.eatenCows} vacas en sus {king.reign} años de reinado</p>
-			{(()=>{console.log( quitarAcentos(king.name.toLowerCase()) )})()}
 		</div>
 	)
 

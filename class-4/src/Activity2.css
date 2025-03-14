@@ -1,0 +1,36 @@
+.Activity2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	width: fit-content;
+	margin: 20px auto 0;
+	padding: 20px;
+}
+
+.Activity2 h2 {
+	grid-column: span 2;
+	text-align: center;
+}
+
+.Activity2 .king {
+	min-width: 250px;
+	width: 100%;
+	margin: auto;
+	background-color: darkblue;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	border-radius: 7px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Activity2 .king button {
+	background-color: bisque;
+	color: darkblue;
+	padding: 7px 10px;
+	border-radius: 7px;
+	font-size: 16px;
+	cursor: pointer;
+}
