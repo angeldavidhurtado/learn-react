@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './Activity3.css'
 
 function Activity3({kings}) {
-	const [kingName, setKingName] = useState('')
+	const [kingName, setKingName] = useState('No se ha encontrado')
 	const [inputValue, setInputValue] = useState('')
 
 	const search = e => {
@@ -25,7 +25,7 @@ function Activity3({kings}) {
 		<div className="Activity3">
 			<h2>Actividad 3</h2>
 			<p>{kingName}</p>
-			<input type="text" value={inputValue} onChange={search} />
+			<input type="text" value={inputValue} onChange={search} placeholder='Buscar' />
 		</div>
 	)
 }

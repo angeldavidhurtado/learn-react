@@ -3,13 +3,12 @@
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
 	width: fit-content;
-	margin: 20px auto 0;
+	margin: auto;
 	padding: 20px;
 }
 
 .Activity2 h2 {
 	grid-column: span 2;
-	text-align: center;
 }
 
 .Activity2 .king {
