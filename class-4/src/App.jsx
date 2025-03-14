@@ -1,5 +1,6 @@
 import Activity1 from './Activity1'
 import Activity2 from './Activity2'
+import Activity3 from './Activity3'
 import './App.css'
 
 const kings = [
@@ -39,6 +40,7 @@ function App() {
     <div className="App">
       <Activity1 kings={kings} />
       <Activity2 kings={kings} />
+      <Activity3 kings={kings} />
     </div>
   )
 }
