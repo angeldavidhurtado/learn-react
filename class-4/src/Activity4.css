@@ -1,0 +1,27 @@
+.Activity4 {
+	max-width: 300px;
+	margin: auto;
+	padding: 20px;
+}
+
+.Activity4 h2 {
+	margin: 20px 0 10px;
+}
+
+.Activity4 .king {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	padding: 5px;
+	align-items: center;
+}
+
+.Activity4 .king span {
+	place-self: center;
+	user-select: none;
+	cursor: pointer;
+	background: darkblue;
+	color: bisque;
+	padding: 5px 10px;
+	border-radius: 7px;
+}
