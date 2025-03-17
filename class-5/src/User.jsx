@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './users.css'
 
 function User({name="Name", lastName="Last Name", urlImg=""}) {
 	const [nameState, setName] = useState(name)
