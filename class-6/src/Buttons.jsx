@@ -8,17 +8,18 @@ function Buttons() {
 	const {data} = useContext(Context)
 	const iLang = data[3].language
 	const lang = data[iLang]
-	const [componentToShow, setComponentToShow] = useState(1)
+
+	const COMPONENTS = {
+		teacher: <Teacher />,
+		address: <Address />
+	}
+	const [componentToShow, setComponentToShow] = useState('teacher')
 
 	return (
 		<div className="buttons">
-			<button onClick={() => setComponentToShow(1)}>{lang.button1}</button>
-			<button onClick={() => setComponentToShow(2)}>{lang.button2}</button>
-			{
-				componentToShow == 1
-				? <Teacher />
-				: <Address />
-			}
+			<button onClick={() => setComponentToShow('teacher')}>{lang.button1}</button>
+			<button onClick={() => setComponentToShow('address')}>{lang.button2}</button>
+			{COMPONENTS[componentToShow]}
 		</div>
 	)
 }
