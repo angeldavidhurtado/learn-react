@@ -1,0 +1,20 @@
+.teacher {
+	background: darkblue;
+	display: grid;
+	grid-template-columns: 1fr;
+	text-align: center;
+	border-radius: 20px;
+}
+
+.teacher h2 {
+	margin: 0;
+	padding: 15px;
+}
+
+.teacher img {
+	width: 100%;
+}
+
+.teacher span {
+	padding: 10px;
+}

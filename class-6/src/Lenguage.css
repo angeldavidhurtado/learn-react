@@ -1,0 +1,19 @@
+.Lenguage {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	width: fit-content;
+	gap: 20px;
+	padding: 20px;
+	margin: auto;
+}
+
+.Lenguage button {
+	background: none;
+	cursor: pointer;
+}
+
+.Lenguage img {
+	border-radius: 7px;
+	vertical-align: top;
+	height: 50px;
+}

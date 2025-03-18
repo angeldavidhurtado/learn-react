@@ -1,0 +1,10 @@
+.text {
+	max-width: 900px;
+	margin: auto;
+	padding: 40px;
+	text-align: center;
+}
+
+.text h1 {
+	margin-bottom: 20px;
+}
