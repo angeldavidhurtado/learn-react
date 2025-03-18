@@ -1,10 +1,16 @@
+import Context from './Context/Context'
+import { useContext } from 'react'
 import './Text.css'
 
 function Text() {
+	const {data} = useContext(Context)
+	const iLang = data[3].language
+	const lang = data[iLang]
+
 	return (
 		<div className="text">
-			<h1>Aprenda React intensivamente con una profesora nativa</h1>
-			<p>2 semanas. Una profesora sólo para ti (12h/día)</p>
+			<h1>{lang.title}</h1>
+			<p>{lang.text}</p>
 		</div>
 	)
 }

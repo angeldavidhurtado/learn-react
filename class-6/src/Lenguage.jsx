@@ -8,9 +8,9 @@ function Lenguage() {
 	const changeLenguage = lang => {
 		const indexLang = {'es':0, 'en':1, 'fr':2}
 		setData(d => {
-			d[3].language = indexLang[lang]
-			console.log(d)
-			return d
+			const newData = [...d]
+			newData[3].language = indexLang[lang]
+			return newData
 		})
 	}
 
