@@ -27,7 +27,7 @@ const lenguages = [
 		button2: 'Emplacement',
 		address: '2700 Rue Jean-Perrin #190, Québec, Canadá'
 	}, {
-		idioma: 0
+		language: 0
 	}
 ]
 

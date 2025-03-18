@@ -1,8 +1,17 @@
+import Context from './Context/Context'
+import { useContext, useEffect } from 'react'
 import './Lenguage.css'
 
 function Lenguage() {
+	const {setData} = useContext(Context)
+
 	const changeLenguage = lang => {
-		console.log(lang)
+		const indexLang = {'es':0, 'en':1, 'fr':2}
+		setData(d => {
+			d[3].language = indexLang[lang]
+			console.log(d)
+			return d
+		})
 	}
 
 	return (
