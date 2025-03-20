@@ -1,0 +1,13 @@
+.king-name {
+	background: darkblue;
+	width: fit-content;
+	margin: 57px auto 20px auto;
+	padding: 35px 10px;
+	border-radius: 20px;
+	text-align: center;
+	border: 1px solid bisque;
+}
+
+.king-name h1 {
+	margin-top: 20px;
+}

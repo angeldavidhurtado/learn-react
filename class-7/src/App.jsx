@@ -8,11 +8,13 @@ function App() {
   return (
     <BrowserRouter>
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/:kingName" element={<King />} />
-        <Route path="/leovigildo" element={<Navigate to="/leogivildo" />} />
-      </Routes>
+      <div className="margin-top">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/king/:kingName" element={<King />} />
+          <Route path="/*" element={<Navigate to="/" />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   )
 }

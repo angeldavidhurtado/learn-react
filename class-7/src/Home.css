@@ -1,0 +1,20 @@
+.homeKings {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: 900px;
+	width: 90%;
+	margin: auto;
+	gap: 15px;
+	padding: 20px;
+}
+
+.homeKings a {
+	border: 1px solid bisque;
+	padding: 20px;
+	border-radius: 20px;
+	background-color: darkblue;
+}
+
+.homeKings img {
+	width: 100%;
+}

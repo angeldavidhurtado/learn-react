@@ -1,0 +1,21 @@
+nav {
+	background: darkblue;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+nav a {
+	display: inline-block;
+	color: bisque;
+	text-decoration: none;
+	text-align: center;
+	padding: 8px 13px;
+}
+
+nav a.active {
+	background: bisque;
+	color: darkblue;
+}
