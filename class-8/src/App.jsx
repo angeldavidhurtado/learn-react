@@ -54,14 +54,14 @@ function App() {
 
   return (
     <div className="products">
-      <div className="agregar-producto">
+      <div className="add-produc">
         <label htmlFor="input-product">Producto</label>
         <input type="text" ref={refInput} id="input-product" />
         <button onClick={()=>dispatch({type:types.addItem, payload:refInput})}>Agregar</button>
       </div>
-      <div className="productos">
+      <div className="list-products">
         {listState.map(item =>
-          <div key={item.id}>
+          <div key={item.id} className="product">
             <div className="name">
               {item.name}
             </div>
