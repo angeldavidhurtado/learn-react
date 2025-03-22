@@ -12,11 +12,10 @@ const reducer = (state, action) => {
   switch (action.type) {
     case types.addItem:
       newState = [...state]
-      const input = action.payload.current
+      const itemName = action.payload.itemName
       const nextId = state.length ? state.at(-1).id+1 : 0
-      const newItem = {id:nextId, name:input.value, quantity:1}
+      const newItem = {id:nextId, name:itemName, quantity:1}
       newState.push(newItem)
-      input.value = ''; input.focus()
       return newState
     case types.deleteItem:
       const idItemToDelete = action.payload.productId
@@ -56,8 +55,17 @@ function App() {
     <div className="products">
       <div className="add-produc">
         <label htmlFor="input-product">Producto</label>
-        <input type="text" ref={refInput} id="input-product" />
-        <button onClick={()=>dispatch({type:types.addItem, payload:refInput})}>Agregar</button>
+        <input type="text" ref={refInput} id="input-product" autoFocus placeholder="Nombre" />
+        <button
+          onClick={() => {
+            const input = refInput.current
+            dispatch({type:types.addItem, payload:{itemName:input.value}})
+            input.value = ''
+            input.focus()
+          }}
+        >
+          Agregar
+        </button>
       </div>
       <div className="list-products">
         {listState.map(item =>

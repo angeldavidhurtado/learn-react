@@ -39,6 +39,9 @@
 /* -- -- list-products -- -- */
 
 .products .list-products {
+	background: darkblue;
+	padding: 20px;
+	border-radius: 10px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
@@ -47,4 +50,39 @@
 	grid-column: span 3;
 	display: grid;
 	grid-template-columns: subgrid;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+
+.products .product:hover {
+	background: darkslateblue;
+}
+
+
+
+
+/* -- -- actions -- -- */
+
+.products .list-products .actions {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+.products .list-products .actions button {
+	background: none;
+	color: bisque;
+	font-size: 18px;
+	border-radius: 7px;
+	border: 1px solid bisque;
+	transition: all .3s ease;
+	cursor: pointer;
+}
+.products .list-products .actions button:hover {
+	background: bisque;
+	color: darkblue;
+}
+
+.products .list-products .actions button:nth-child(3) {
+	font-size: 14px;
 }
