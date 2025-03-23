@@ -63,9 +63,7 @@ function App() {
             input.value = ''
             input.focus()
           }}
-        >
-          Agregar
-        </button>
+        >Agregar</button>
       </div>
       <div className="list-products">
         {listState.map(item =>
