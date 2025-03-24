@@ -1,25 +1,25 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer, useState } from 'react'
 
 // Función costosa que simula un cálculo o inicialización pesada
 function expensiveComputation(initialValue) {
-	console.log('Ejecutando expensiveComputation con valor:', initialValue);
-	return { count: initialValue };
+	console.log('Ejecutando expensiveComputation con valor:', initialValue)
+	return { count: initialValue }
 }
 
 // Reducer simple para incrementar el contador
 function reducer(state, action) {
 	switch (action.type) {
 		case 'increment':
-			return { count: state.count + 1 };
+			return { count: state.count + 1 }
 		default:
-			return state;
+			return state
 	}
 }
 
 // Sin lazy initialization: la función costosa se ejecuta en cada render del componente padre
 function CounterNoLazy({ initialCount }) {
 	// Se ejecuta expensiveComputation cada vez que se evalúa esta línea
-	const [state, dispatch] = useReducer(reducer, expensiveComputation(initialCount));
+	const [state, dispatch] = useReducer(reducer, expensiveComputation(initialCount))
 
 	return (
 		<div style={{ border: '1px solid red', padding: '1rem', margin: '1rem' }}>
@@ -27,14 +27,13 @@ function CounterNoLazy({ initialCount }) {
 			<p>Contador: {state.count}</p>
 			<button onClick={() => dispatch({ type: 'increment' })}>Incrementar</button>
 		</div>
-	);
+	)
 }
 
 // Con lazy initialization: la función costosa se ejecuta solo una vez en el montaje
 function CounterLazy({ initialCount }) {
 	// React llama a expensiveComputation(initialCount) solo en el montaje
-	const [state, dispatch] = useReducer(reducer, initialCount, expensiveComputation);
-	console.log(initialCount)
+	const [state, dispatch] = useReducer(reducer, initialCount, expensiveComputation)
 
 	return (
 		<div style={{ border: '1px solid green', padding: '1rem', margin: '1rem' }}>
@@ -42,12 +41,12 @@ function CounterLazy({ initialCount }) {
 			<p>Contador: {state.count}</p>
 			<button onClick={() => dispatch({ type: 'increment' })}>Incrementar</button>
 		</div>
-	);
+	)
 }
 
 // Componente principal para forzar re-renders
 function InitComparison() {
-	const [dummy, setDummy] = useState(0);
+	const [dummy, setDummy] = useState(0)
 
 	return (
 		<div>
@@ -57,7 +56,7 @@ function InitComparison() {
 			<CounterNoLazy initialCount={0} />
 			<CounterLazy initialCount={0} />
 		</div>
-	);
+	)
 }
 
-export default InitComparison;
+export default InitComparison
