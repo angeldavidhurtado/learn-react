@@ -1,11 +1,11 @@
-import InitComparison from './InitComparison'
-import './App.css'
-
 function App() {
   return (
-    <>
-      <InitComparison />
-    </>
+    <div className="Login">
+      <h1>Vive el país</h1>
+      <label htmlFor="user">Nombre</label>
+      <input type="text" id="user" />
+      <button>Login</button>
+    </div>
   )
 }
 
