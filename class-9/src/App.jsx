@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Places from './Places'
 import Login from './Login'
 import SiteDetail from './SiteDetail'
@@ -5,15 +6,18 @@ import MyTravelPlan from './MyTravelPlan'
 import Nav from './Nav'
 
 function App() {
-  {/*
-    <Nav />
-    <Login />
-    <Places />
-    <SiteDetail />
-    <MyTravelPlan />
-  */}
   return (
-    <></>
+    <>
+      <Nav />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Places />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/site" element={<SiteDetail />} />
+        <Route path="/plan" element={<MyTravelPlan />} />
+      </Routes>
+    </BrowserRouter>
+    </>
   )
 }
 
