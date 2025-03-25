@@ -1,0 +1,38 @@
+.places {
+	width: 90%;
+	max-width: 900px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.places > div {
+	background: darkblue;
+	border-radius: 12px;
+	padding: 20px;
+	border: 1px solid bisque;
+}
+
+.places h2 {
+	font-size: 22px;
+}
+
+.places p {
+	margin: 10px 0;
+}
+
+.places img {
+	width: 100%;
+	vertical-align: top;
+	border-radius: 10px 10px 0 0;
+}
+
+.places a {
+	display: inline-block;
+	background-color: bisque;
+	padding: 7px 12px;
+	border-radius: 7px;
+	text-decoration: none;
+	color: darkblue;
+}

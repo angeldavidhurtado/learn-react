@@ -1,11 +1,14 @@
+import Places from './Places'
+import Login from './Login'
+import SiteDetail from './SiteDetail'
+
 function App() {
+  {/*
+    <Login />
+    <Places />
+  */}
   return (
-    <div className="Login">
-      <h1>Vive el país</h1>
-      <label htmlFor="user">Nombre</label>
-      <input type="text" id="user" />
-      <button>Login</button>
-    </div>
+    <SiteDetail />
   )
 }
 
