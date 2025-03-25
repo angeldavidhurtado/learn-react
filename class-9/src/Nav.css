@@ -1,0 +1,28 @@
+nav {
+	background-color: rgb(0, 0, 60);
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 40px;
+}
+
+nav a {
+	color: bisque;
+	text-decoration: none;
+}
+nav a:hover {
+	text-decoration: underline;
+}
+
+nav button {
+	background: darkblue;
+	color: bisque;
+	font-size: 16px;
+	padding: 8px 13px;
+}

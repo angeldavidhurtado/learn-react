@@ -1,0 +1,52 @@
+.my-travel-plan {
+	padding: 20px;
+}
+
+.my-travel-plan h1 {
+	text-align: center;
+}
+
+.my-travel-plan ul {
+	background-color: #000067;
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 10px;
+	padding: 15px;
+	width: 350px;
+	margin: auto;
+	border-radius: 15px 15px 0 0;
+	margin-top: 20px;
+}
+
+.my-travel-plan li {
+	grid-column: span 2;
+	display: grid;
+	grid-template-columns: subgrid;
+	align-items: center;
+}
+
+.my-travel-plan button {
+	background: darkblue;
+	color: bisque;
+	font-size: 16px;
+	padding: 8px 12px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.my-travel-plan .cost {
+	background: #000067;
+	width: 350px;
+	border-radius: 0 0 15px 15px;
+	margin: auto;
+	padding: 4px 15px 17px;
+	text-align: center;
+}
+
+.my-travel-plan .user-name {
+	width: 350px;
+	text-align: right;
+	margin: auto;
+	padding: 15px;
+}
