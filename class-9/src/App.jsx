@@ -6,9 +6,10 @@ function App() {
   {/*
     <Login />
     <Places />
+    <SiteDetail />
   */}
   return (
-    <SiteDetail />
+    <></>
   )
 }
 

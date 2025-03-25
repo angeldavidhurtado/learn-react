@@ -1,0 +1,57 @@
+.site-detail {
+	padding: 20px;
+}
+
+.site-detail h1 {
+	margin-bottom: 13px;
+}
+
+.site-detail h1,
+.site-detail p {
+	text-align: center;
+}
+
+.site-detail .picture {
+	position: relative;
+	width: 90%;
+	max-width: 700px;
+	margin: auto;
+	display: grid;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.site-detail .picture span {
+	background-color: black;
+	padding: 15px;
+	font-size: 28px;
+	border-radius: 12px;
+	margin: 10px;
+}
+
+.site-detail .picture img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	border-radius: 15px;
+}
+
+.site-detail .picture .buttons {
+	margin: 10px;
+}
+
+.site-detail .picture button {
+	background: darkblue;
+	color: bisque;
+	font-size: 16px;
+	padding: 8px 13px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.site-detail .picture button.back {
+	margin-left: 10px;
+}
