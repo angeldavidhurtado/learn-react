@@ -15,7 +15,7 @@ function Router2() {
 				{
 					rutaDeseada
 					? <Route path="/plan" element={<MyTravelPlan />} />
-					: <Route path="/plan" element={<SiteDetail />} />
+					: <></>
 				}
 				<Route path="/area/:area" element={<Places />} />
 				<Route path="/site" element={<SiteDetail />} />
