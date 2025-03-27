@@ -1,10 +1,15 @@
 import dataTouristPlaces from './dataTouristPlaces'
+import { useParams } from 'react-router-dom'
 import './Places.css'
 
 function Places() {
+	const { area } = useParams()
+
 	return (
 		<div className="places">
-			{dataTouristPlaces.map(place =>
+			{dataTouristPlaces
+			.filter(place => place.area == area)
+			.map(place =>
 				<div key={place.name}>
 					<img src={`/img/${place.img}`} alt={place.name} />
 					<h2>{place.name}</h2>

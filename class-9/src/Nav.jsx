@@ -1,20 +1,25 @@
+import { Link } from 'react-router-dom'
 import './Nav.css'
 
-function Nav() {
+function Nav({ setRutaDeseada }) {
 	return (
 		<nav>
 			<ul>
 				<li>
-					<a href="#">Capital y Patagonia</a>
+					<Link to="/area/cp">Capital y Patagonia</Link>
 				</li>
 				<li>
-					<a href="#">Norte y Este</a>
+					<Link to="/area/no">Norte y Este</Link>
 				</li>
 				<li>
-					<a href="#">Mi plan de viaje</a>
+					<Link to="/plan">Mi plan de viaje</Link>
 				</li>
 			</ul>
-			<button>Logout</button>
+			<button
+				onClick={()=>{
+					setRutaDeseada(data => !data)
+				}}
+			>Logout</button>
 		</nav>
 	)
 }
