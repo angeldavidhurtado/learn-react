@@ -9,6 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route index element={<MyTravelPlan />} />
         <Route path="/login" element={<Login />} />
 
         <Route element={<LayoutWithNav />}>
