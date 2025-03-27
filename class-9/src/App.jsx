@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LayoutWithNav from './LayoutWithNav'
 import Login from './Login'
 import Places from './Places'
@@ -9,8 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<MyTravelPlan />} />
-        <Route path="/login" element={<Login />} />
+        <Route index element={<Login />} />
+        <Route path="/login" element={<Navigate to="/" replace />} />
 
         <Route element={<LayoutWithNav />}>
           <Route path="/area/:area" element={<Places />} />
