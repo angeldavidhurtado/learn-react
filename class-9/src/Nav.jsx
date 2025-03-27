@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './Nav.css'
 
-function Nav({ setRutaDeseada }) {
+function Nav() {
 	return (
 		<nav>
 			<ul>
@@ -15,11 +15,7 @@ function Nav({ setRutaDeseada }) {
 					<Link to="/plan">Mi plan de viaje</Link>
 				</li>
 			</ul>
-			<button
-				onClick={()=>{
-					setRutaDeseada(data => !data)
-				}}
-			>Logout</button>
+			<button>Logout</button>
 		</nav>
 	)
 }
