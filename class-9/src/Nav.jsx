@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { AuthContext } from './App'
 import './Nav.css'
 
 function Nav() {
+	const { logout } = useContext(AuthContext)
+
 	return (
 		<nav>
 			<ul>
@@ -15,7 +19,7 @@ function Nav() {
 					<Link to="/plan">Mi plan de viaje</Link>
 				</li>
 			</ul>
-			<button>Logout</button>
+			<button onClick={logout}>Logout</button>
 		</nav>
 	)
 }
