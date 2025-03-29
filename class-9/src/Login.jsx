@@ -1,26 +1,20 @@
-import { useContext, useRef, useEffect } from 'react'
+import { useContext, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from './App'
 import { r } from './App'
 import './Login.css'
 
 function Login() {
-  const { user, login } = useContext(AuthContext)
+  const { login } = useContext(AuthContext)
   const inputUserNameRef = useRef(null)
   const navigate = useNavigate()
 
   console.log(`random Login ${r}`)
 
-  useEffect(() => {
-    if (user) navigate('/area/cp', {replace: true})
-  }, [])
-
   const buttonLogin = () => {
-    let userName = inputUserNameRef.current.value
-    userName = userName.replace(/\s+/g, ' ').trim()
-    if (!userName) return
-    login(userName)
-    navigate('/area/cp', {replace: true})
+    const userName = inputUserNameRef.current.value
+    const logged = login(userName)
+    if (logged) navigate('/area/cp', {replace: true})
   }
 
 	return (
