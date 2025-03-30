@@ -1,10 +1,11 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import dataTouristPlaces from './dataTouristPlaces'
 import './SiteDetail.css'
 
 function SiteDetail() {
 	const { name } = useParams()
 	const place = dataTouristPlaces.find(place => place.name == name)
+	const navigate = useNavigate()
 
 	return (
 		<div className="site-detail">
@@ -15,7 +16,7 @@ function SiteDetail() {
 				<div className="buttons">
 					<button>Comprar</button>
 					<button>Anular</button>
-					<button className="back">Volver</button>
+					<button className="back" onClick={()=>navigate(`/area/${place.area}`)}>Volver</button>
 				</div>
 				<img src={`/img/${place.img}`} alt="" />
 			</div>
