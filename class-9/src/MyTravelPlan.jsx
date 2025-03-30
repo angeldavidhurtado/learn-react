@@ -3,7 +3,7 @@ import { AuthContext } from './App'
 import './MyTravelPlan.css'
 
 function MyTravelPlan() {
-	const { user } = useContext(AuthContext)
+	const { user, PlansToBuy } = useContext(AuthContext)
 
 	return (
 		<div className="my-travel-plan">
@@ -11,11 +11,11 @@ function MyTravelPlan() {
 			<ul>
 				<li>
 					<p>{'Nombre lugar'} (${20})</p>
-					<button>Anular</button>
+					<button onClick={PlansToBuy.dispatch}>Anular</button>
 				</li>
 				<li>
 					<p>{'Nombre lugar'} (${20})</p>
-					<button>Anular</button>
+					<button onClick={()=>console.log(PlansToBuy.state)}>Anular</button>
 				</li>
 				<li>
 					<p>{'Nombre lugar'} (${20})</p>

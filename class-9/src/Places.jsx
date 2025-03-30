@@ -1,9 +1,13 @@
+import { useContext } from 'react'
+import { AuthContext } from './App'
 import dataTouristPlaces from './dataTouristPlaces'
 import { useParams, Link } from 'react-router-dom'
 import './Places.css'
 
 function Places() {
 	const { area } = useParams()
+	const { PlansToBuy } = useContext(AuthContext)
+	console.log(PlansToBuy.state)
 
 	return (
 		<div className="places">
