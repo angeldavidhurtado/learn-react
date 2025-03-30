@@ -6,8 +6,8 @@ import './Places.css'
 
 function Places() {
 	const { area } = useParams()
-	const { PlansToBuy } = useContext(AuthContext)
-	console.log(PlansToBuy.state)
+	const { plansToBuy } = useContext(AuthContext)
+	console.log(plansToBuy.state)
 
 	return (
 		<div className="places">

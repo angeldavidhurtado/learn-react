@@ -3,24 +3,21 @@ import { AuthContext } from './App'
 import './MyTravelPlan.css'
 
 function MyTravelPlan() {
-	const { user, PlansToBuy } = useContext(AuthContext)
+	const { user, plansToBuy } = useContext(AuthContext)
+	console.log(plansToBuy)
 
 	return (
 		<div className="my-travel-plan">
 			<h1>Lugares a visitar</h1>
 			<ul>
-				<li>
-					<p>{'Nombre lugar'} (${20})</p>
-					<button onClick={PlansToBuy.dispatch}>Anular</button>
-				</li>
-				<li>
-					<p>{'Nombre lugar'} (${20})</p>
-					<button onClick={()=>console.log(PlansToBuy.state)}>Anular</button>
-				</li>
-				<li>
-					<p>{'Nombre lugar'} (${20})</p>
-					<button>Anular</button>
-				</li>
+				{plansToBuy.state.placesBuy.map(place =>
+					<li key={place.name}>
+						<p>{place.name} (${place.cost})</p>
+						<button onClick={
+							()=>plansToBuy.dispatch({ type:plansToBuy.type.delete, payload:place.name })
+						}>Anular</button>
+					</li>
+				)}
 			</ul>
 			<p className="cost">Precio total: ${300}</p>
 			<p className="user-name">Usuario: {user}</p>

@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { createContext, useEffect, useState, useReducer } from 'react'
-import plansToBuy from './plansToBuy'
+import plansToBuyStateAndReducer from './plansToBuyStateAndReducer'
 import LayoutWithNav from './LayoutWithNav'
 import Login from './Login'
 import Places from './Places'
@@ -37,10 +37,14 @@ function App() {
 
   // useReducer de plansToBuy
   const [statePlansToBuy, dispatchPlansToBuy] = useReducer(
-    plansToBuy.reducerPlansToBuy,
-    plansToBuy.initialStatePlnasToBuy
+    plansToBuyStateAndReducer.reducerPlansToBuy,
+    plansToBuyStateAndReducer.initialStatePlnasToBuy
   )
-  const PlansToBuy = {state:statePlansToBuy, dispatch:dispatchPlansToBuy}
+  const plansToBuy = {
+    state:statePlansToBuy,
+    type:plansToBuyStateAndReducer.type,
+    dispatch:dispatchPlansToBuy
+  }
 
   return (
     <AuthContext.Provider
@@ -49,7 +53,7 @@ function App() {
         login,
         logout,
         getUser,
-        PlansToBuy
+        plansToBuy
       }}
     >
       <Routes>

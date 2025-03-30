@@ -7,13 +7,28 @@ const initialStatePlnasToBuy = {
 	total:0
 }
 
-const reducerPlansToBuy = (state, action) => {
-	return {saludo: 'Hola'}
+const type = {
+	delete:'delete'
 }
 
-const plansToBuy = { reducerPlansToBuy, initialStatePlnasToBuy }
+const reducerPlansToBuy = (state, action) => {
+	switch (action.type) {
+		case type.delete:
+			console.log('delete')
+			console.log(action.payload)
+			return state
+		default:
+			return state
+	}
+}
 
-export default plansToBuy
+const plansToBuyStateAndReducer = {
+	initialStatePlnasToBuy,
+	type,
+	reducerPlansToBuy
+}
+
+export default plansToBuyStateAndReducer
 /*
 const [statePlansToBuy, dispatchPlansToBuy] = useReducer(
 		plansToBuy.reducerPlansToBuy,
