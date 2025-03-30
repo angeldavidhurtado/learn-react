@@ -1,8 +1,10 @@
+import { useParams } from 'react-router-dom'
 import dataTouristPlaces from './dataTouristPlaces'
 import './SiteDetail.css'
 
 function SiteDetail() {
-	const place = dataTouristPlaces.find(place => place.name == 'Cafayate')
+	const { name } = useParams()
+	const place = dataTouristPlaces.find(place => place.name == name)
 
 	return (
 		<div className="site-detail">

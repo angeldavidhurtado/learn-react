@@ -47,7 +47,7 @@ function App() {
         <Route element={<PrivateRoutes />}>
           <Route element={<LayoutWithNav />}>
             <Route path="/area/:area" element={<Places />} />
-            <Route path="/site" element={<SiteDetail />} />
+            <Route path="/site/:name" element={<SiteDetail />} />
             <Route path="/plan" element={<MyTravelPlan />} />
           </Route>
         </Route>
