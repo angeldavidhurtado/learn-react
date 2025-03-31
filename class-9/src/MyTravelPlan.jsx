@@ -4,7 +4,6 @@ import './MyTravelPlan.css'
 
 function MyTravelPlan() {
 	const { user, plansToBuy } = useContext(AuthContext)
-	console.log(plansToBuy.state)
 
 	return (
 		<div className="my-travel-plan">

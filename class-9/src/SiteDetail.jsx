@@ -9,6 +9,14 @@ function SiteDetail() {
 	const place = dataTouristPlaces.find(place => place.name == name)
 	const navigate = useNavigate()
 	const { plansToBuy } = useContext(AuthContext)
+	const isInTripPlan = plansToBuy.state.placesBuy.some(iPlace => iPlace.name == place.name)
+
+	const switchAddDelete = () => {
+		const action = isInTripPlan
+			? { type: plansToBuy.type.delete, payload: { placeName: place.name } }
+			: { type: plansToBuy.type.add, payload: { placeName: place.name, placeCost: place.cost } }
+		plansToBuy.dispatch(action)
+	}
 
 	return (
 		<div className="site-detail">
@@ -17,12 +25,9 @@ function SiteDetail() {
 			<div className="picture">
 				<span>${place.cost}</span>
 				<div className="buttons">
-					<button onClick={() => plansToBuy.dispatch({
-						type: plansToBuy.type.add, payload: { placeName:place.name, placeCost:place.cost }
-					})}>Comprar</button>
-					<button onClick={() => plansToBuy.dispatch({
-						type: plansToBuy.type.delete, payload: { placeName: place.name }
-					})}>Anular</button>
+					<button onClick={switchAddDelete}>
+						{ isInTripPlan ? 'Anular' : 'Comprar' }
+					</button>
 					<button className="back" onClick={()=>navigate(`/area/${place.area}`)}>Volver</button>
 				</div>
 				<img src={`/img/${place.img}`} alt="" />
