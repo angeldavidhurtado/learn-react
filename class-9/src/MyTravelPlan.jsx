@@ -14,7 +14,10 @@ function MyTravelPlan() {
 					<li key={place.name}>
 						<p>{place.name} (${place.cost})</p>
 						<button onClick={
-							()=>plansToBuy.dispatch({ type:plansToBuy.type.delete, payload:place.name })
+							()=>plansToBuy.dispatch({
+								type: plansToBuy.type.delete,
+								payload:{ placeName: place.name }
+							})
 						}>Anular</button>
 					</li>
 				)}

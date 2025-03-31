@@ -14,9 +14,14 @@ const type = {
 const reducerPlansToBuy = (state, action) => {
 	switch (action.type) {
 		case type.delete:
-			console.log('delete')
-			console.log(action.payload)
-			return state
+			const newState = {}
+			newState.placesBuy = state.placesBuy.filter(
+				place => place.name != action.payload.placeName
+			)
+			newState.total = newState.placesBuy.reduce(
+				(total, place) => total + place.cost,
+			0)
+			return newState
 		default:
 			return state
 	}
