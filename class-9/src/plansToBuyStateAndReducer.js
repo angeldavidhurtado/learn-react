@@ -13,24 +13,23 @@ const type = {
 }
 
 const reducerPlansToBuy = (state, action) => {
-	const newState = {...state}
 	switch (action.type) {
 		case type.add:
 			const { placeName, placeCost } = action.payload
-			if (newState.placesBuy.some(place => place.name == placeName))
+			if (state.placesBuy.some(place => place.name == placeName))
 				return state
 			return {
 				placesBuy: [...state.placesBuy, {name:placeName, cost:placeCost}],
 				total: state.total + placeCost
 			}
 		case type.delete:
-			newState.placesBuy = state.placesBuy.filter(
+			const placesBuy = state.placesBuy.filter(
 				place => place.name != action.payload.placeName
 			)
-			newState.total = newState.placesBuy.reduce(
-				(total, place) => total + place.cost,
-			0)
-			return newState
+			return {
+				placesBuy: placesBuy,
+				total: placesBuy.reduce((total, place) => total + place.cost, 0)
+			}
 		default:
 			return state
 	}

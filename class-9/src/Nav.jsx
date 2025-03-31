@@ -19,7 +19,7 @@ function Nav() {
 					<Link to="/plan">Mi plan de viaje</Link>
 				</li>
 			</ul>
-			<button onClick={()=>logout}>Logout</button>
+			<button onClick={logout}>Logout</button>
 		</nav>
 	)
 }
