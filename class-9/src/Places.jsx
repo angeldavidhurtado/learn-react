@@ -7,20 +7,23 @@ import './Places.css'
 function Places() {
 	const { area } = useParams()
 	const { plansToBuy } = useContext(AuthContext)
-	console.log(plansToBuy.state)
 
 	return (
 		<div className="places">
 			{dataTouristPlaces
 			.filter(place => place.area == area)
-			.map(place =>
-				<div key={place.name}>
-					<img src={`/img/${place.img}`} alt={place.name} />
-					<h2>{place.name}</h2>
-					<p>{place.location}</p>
-					<Link to={`/site/${place.name}`}>Ver</Link>
-				</div>
-			)}
+			.map(place => {
+				const isInTripPlan = plansToBuy.state.placesBuy.some(iPlace => iPlace.name == place.name)
+				return (
+					<div key={place.name} className="place">
+						<img src={`/img/${place.img}`} alt={place.name} />
+						<h2>{place.name}</h2>
+						<p>{place.location}</p>
+						<Link to={`/site/${place.name}`}>Ver</Link>
+						{ isInTripPlan ? <div className="green"></div> : null }
+					</div>
+				)
+			})}
 		</div>
 	)
 }

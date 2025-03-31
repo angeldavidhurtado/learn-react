@@ -36,3 +36,17 @@
 	text-decoration: none;
 	color: darkblue;
 }
+
+.places .place {
+	position: relative;
+}
+
+.places .green {
+	width: 20px;
+	height: 20px;
+	background: darkturquoise;
+	border-radius: 100%;
+	position: absolute;
+	right: 15px;
+	bottom: 25px;
+}
