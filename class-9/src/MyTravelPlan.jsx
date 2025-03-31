@@ -4,7 +4,7 @@ import './MyTravelPlan.css'
 
 function MyTravelPlan() {
 	const { user, plansToBuy } = useContext(AuthContext)
-	console.log(plansToBuy)
+	console.log(plansToBuy.state)
 
 	return (
 		<div className="my-travel-plan">
@@ -22,7 +22,7 @@ function MyTravelPlan() {
 					</li>
 				)}
 			</ul>
-			<p className="cost">Precio total: ${300}</p>
+			<p className="cost">Precio total: ${plansToBuy.state.total}</p>
 			<p className="user-name">Usuario: {user}</p>
 		</div>
 	)
