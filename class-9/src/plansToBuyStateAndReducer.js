@@ -1,6 +1,6 @@
 const initialStatePlnasToBuy = {
 	placesBuy: [
-		{ name:'CafayateCafayate', cost:90 },
+		{ name:'Cafayate', cost:90 },
 		{ name:'Parque Nacional Los Cardones', cost:85 },
 		{ name:'Viaducto La Polvorilla', cost:124 }
 	],

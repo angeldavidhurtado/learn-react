@@ -20,7 +20,9 @@ function SiteDetail() {
 					<button onClick={() => plansToBuy.dispatch({
 						type: plansToBuy.type.add, payload: { placeName:place.name, placeCost:place.cost }
 					})}>Comprar</button>
-					<button>Anular</button>
+					<button onClick={() => plansToBuy.dispatch({
+						type: plansToBuy.type.delete, payload: { placeName: place.name }
+					})}>Anular</button>
 					<button className="back" onClick={()=>navigate(`/area/${place.area}`)}>Volver</button>
 				</div>
 				<img src={`/img/${place.img}`} alt="" />
