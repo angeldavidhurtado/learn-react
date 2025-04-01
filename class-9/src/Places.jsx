@@ -17,10 +17,12 @@ function Places() {
 				return (
 					<div key={place.name} className="place">
 						<img src={`/img/${place.img}`} alt={place.name} />
-						<h2>{place.name}</h2>
-						<p>{place.location}</p>
-						<Link to={`/site/${place.name}`}>Ver</Link>
-						{ isInTripPlan ? <div className="green"></div> : null }
+						<div className="content">
+							<h2>{place.name}</h2>
+							<p>{place.location}</p>
+							<Link to={`/site/${place.name}`}>Ver</Link>
+							{ isInTripPlan ? <div className="green"></div> : null }
+						</div>
 					</div>
 				)
 			})}

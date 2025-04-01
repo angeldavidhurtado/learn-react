@@ -1,31 +1,43 @@
 .places {
-	width: 90%;
-	max-width: 900px;
+	max-width: 720px;
+	padding: 20px;
 	margin: auto;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: calc(50% - 10px) calc(50% - 10px);
 	gap: 20px;
 }
 
-.places > div {
+.places .content {
 	background: darkblue;
-	border-radius: 12px;
+	border-radius: 0 0 12px 12px;
 	padding: 20px;
-	border: 1px solid bisque;
+	position: relative;
 }
 
 .places h2 {
+	margin: 0;
 	font-size: 22px;
+	border-bottom: 1px solid bisque;
+	padding-bottom: 15px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
 }
 
 .places p {
-	margin: 10px 0;
+	margin: 20px 0 13px;
+
+	display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .places img {
 	width: 100%;
 	vertical-align: top;
-	border-radius: 10px 10px 0 0;
+	border-radius: 12px 12px 0 0;
 }
 
 .places a {
@@ -37,16 +49,12 @@
 	color: darkblue;
 }
 
-.places .place {
-	position: relative;
-}
-
 .places .green {
 	width: 20px;
 	height: 20px;
 	background: darkturquoise;
 	border-radius: 100%;
 	position: absolute;
-	right: 15px;
-	bottom: 25px;
+	right: 20px;
+	bottom: 28px;
 }
