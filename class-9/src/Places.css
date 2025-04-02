@@ -32,7 +32,7 @@
 	padding: 20px;
 	margin: auto;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(0, 330px));
 	justify-content: center;
 	gap: 20px;
 }
@@ -60,6 +60,7 @@
 	display: -webkit-box;
   -webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
+	line-clamp: 2;
 	/*
   -webkit-line-clamp: 2;
 	*/
