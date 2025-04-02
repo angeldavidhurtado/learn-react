@@ -1,9 +1,39 @@
+/*
+	grid-template-columns: repeat(2, calc(50% - 10px), 330px);
+	*/
+	/*
+
+	grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+	
+	auto-fit o auto-fill siempre deben estar con minmax
+	y eligen el mayor ancho "explicito" definido
+	luego tratan de llenar el contenedor con tantas columnas como puedan
+	pero con ese ancho mayor explicito, no con el maximo sino con el mayor
+	pero explicito, por ejemplo:
+	minmax(50px, 1fr) - Aquí el ancho mayor explicito es 50px
+	minmax(50px, 330px) - Aquí el ancho mayor explicito es 330px
+	minmax(1fr, 330px) - Aquí esto css lo reconoce como un error
+
+	despues de que ya se tiene ese ancho mayor "explicito" entonces css
+	coloca tantas columnas como pueda con ese ancho antes de que se desborden
+	y luego las expande según minmax, ej.
+	minmax(10px, 100px) aquí el mayor ancho explicito es 100px y no expande
+	minmax(100px, 1fr) aquí el mayor ancho explicito es 100px y ahora sí expande
+	minmax(1fr, 100px) aquí css lo reconocerá como un error, no puede haber una unidad "relativa" como valor minimo
+
+	y luego si tengo auto-fit o auto-fill:
+	auto-fill: crea tantas columnas implicitas como pueda
+	auto-fit: No crea columnas implicitas
+
+	*/
+	
 .places {
-	max-width: 720px;
 	padding: 20px;
 	margin: auto;
 	display: grid;
-	grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	justify-content: center;
 	gap: 20px;
 }
 
@@ -27,10 +57,12 @@
 
 .places p {
 	margin: 20px 0 13px;
-
 	display: -webkit-box;
   -webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	/*
   -webkit-line-clamp: 2;
+	*/
   overflow: hidden;
 }
 
