@@ -1,0 +1,44 @@
+.header {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 15px;
+	width: fit-content;
+	margin: auto;
+	padding: 40px 40px 20px;
+}
+
+.places {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: fit-content;
+	margin: auto;
+	gap: 20px;
+	padding: 20px 40px 40px;
+}
+
+.place {
+	background: darkblue;
+	display: block;
+	width: fit-content;
+	padding-top: 20px;
+	border-radius: 20px;
+}
+
+.place input {
+	display: block;
+	margin: auto;
+}
+
+.place .cost {
+	display: block;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.place img {
+	vertical-align: top;
+	border-radius: 0 0 20px 20px;
+	user-select: none;
+	pointer-events: none;
+}

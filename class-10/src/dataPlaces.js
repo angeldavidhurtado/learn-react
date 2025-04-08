@@ -1,22 +1,24 @@
 const places = [
 	{
-		place: 'Marítima',
+		name: 'Marítima',
 		cost: 210,
 		img: 'zonaMaritima.jpg'
 	},
 	{
-		place: 'Ciudades',
+		name: 'Ciudades',
 		cost: 175,
 		img: 'zonaCiudad.jpg'
 	},
 	{
-		place: 'Naturales',
+		name: 'Naturales',
 		cost: 154,
 		img: 'zonaNatural.webp'
 	},
 	{
-		place: 'de Riesgo',
+		name: 'de Riesgo',
 		cost: 52,
 		img: 'zonaAdrenalina.jpg'
 	}
 ]
+
+export default places
