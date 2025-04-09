@@ -4,14 +4,17 @@ import './Place.css'
 
 function Place() {
 	console.log('--- --- --- ---')
-	const j = useForm()
-	console.log(j.formState.errors)
+	const { register, handleSubmit, formState: { errors } } = useForm()
+	const onSubmit = data => {
+		console.log(data)
+	}
+	// console.log(register)
 
 	return (
-		<form>
+		<form onSubmit={handleSubmit(onSubmit)}>
 			<div className="header">
 				<p>Selecciona un lugar a visitar</p>
-				<input type="submit" onClick={e=>{e.preventDefault(); console.log('hola')}} />
+				<input type="submit" />
 			</div>
 			<div className="places">
 				{dataPlaces.map(place =>
