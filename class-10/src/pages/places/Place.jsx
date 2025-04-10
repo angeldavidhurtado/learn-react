@@ -1,15 +1,18 @@
-import dataPlaces from '../../data/places'
-import { useForm } from 'react-hook-form'
+// import dataPlaces from '../../data/places'
+// import { useForm } from 'react-hook-form'
 import './Place.css'
 
 function Place() {
+	/*
 	console.log('--- --- --- ---')
 	const { register, handleSubmit, formState: { errors } } = useForm()
 	const onSubmit = data => {
 		console.log(data)
 	}
+	*/
 
 	return (
+		/*
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<div className="header">
 				<p>Selecciona un lugar a visitar</p>
@@ -26,6 +29,8 @@ function Place() {
 				)}
 			</div>
 		</form>
+		*/
+		<p>hola</p>
 	)
 }
 

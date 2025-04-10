@@ -1,10 +1,15 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Place from './pages/places/Place'
+import FormQuestions from './pages/form-questions/FormQuestions'
 
 function App() {
 	return (
-		<>
-			<Place />
-		</>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Place />} />
+				<Route path="/" element={<FormQuestions />} />
+			</Routes>
+		</BrowserRouter>
 	)
 }
 
