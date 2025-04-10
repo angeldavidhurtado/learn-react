@@ -1,0 +1,58 @@
+my-app/
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── icons/
+│   │
+│   ├── components/
+│   │   ├── header-bar/
+│   │   │   └── HeaderBar.jsx
+│   │   ├── user-card/
+│   │   │   └── UserCard.jsx
+│   │   └── modal-dialog/
+│   │       └── ModalDialog.jsx
+│   │
+│   ├── contexts/
+│   │   └── auth-context/
+│   │       ├── auth-context.js
+│   │       ├── auth-provider.js
+│   │       └── use-auth.js
+│   │
+│   ├── hooks/
+│   │   ├── use-local-storage.js
+│   │   └── use-click-outside.js
+│   │
+│   ├── layouts/
+│   │   ├── main-layout/
+│   │   │   └── MainLayout.jsx
+│   │   └── dashboard-layout/
+│   │       └── DashboardLayout.jsx
+│   │
+│   ├── pages/
+│   │   ├── user-profile/
+│   │   │   └── UserProfile.jsx
+│   │   ├── login-page/
+│   │   │   └── LoginPage.jsx
+│   │   └── not-found-page/
+│   │       └── NotFoundPage.jsx
+│   │
+│   ├── services/
+│   │   ├── auth-service.js
+│   │   └── user-service.js
+│   │
+│   ├── utils/
+│   │   ├── format-date.js
+│   │   └── validate-email.js
+│   │
+│   ├── styles/
+│   │   └── globals.css
+│   │
+│   ├── App.jsx   // rutas, layouts y lógica de UI
+│   └── main.jsx  // estilos (Bootstrap) y provider globales
+│
+├── .gitignore
+├── package.json
+└── README.md

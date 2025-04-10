@@ -1,4 +1,4 @@
-import dataPlaces from './data/places'
+import dataPlaces from '../../data/places'
 import { useForm } from 'react-hook-form'
 import './Place.css'
 
@@ -8,7 +8,6 @@ function Place() {
 	const onSubmit = data => {
 		console.log(data)
 	}
-	// console.log(register)
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>

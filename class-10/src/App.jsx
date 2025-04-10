@@ -1,13 +1,11 @@
-import DataFormProvider from './context/DataFormProvider'
-import Place from './Place'
-import './App.css'
+import Place from './pages/places/Place'
 
 function App() {
-  return (
-    <DataFormProvider>
-      <Place />
-    </DataFormProvider>
-  )
+	return (
+		<>
+			<Place />
+		</>
+	)
 }
 
 export default App
