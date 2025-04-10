@@ -1,4 +1,4 @@
-import dataPlaces from './dataPlaces'
+import dataPlaces from './data/places'
 import { useForm } from 'react-hook-form'
 import './Place.css'
 

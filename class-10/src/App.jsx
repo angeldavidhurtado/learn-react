@@ -1,16 +1,12 @@
-import { useContext } from 'react'
-import Context from './Context'
-import { useForm } from 'react-hook-form'
+import DataFormProvider from './context/DataFormProvider'
 import Place from './Place'
 import './App.css'
 
 function App() {
-  console.log(useForm)
-
   return (
-    <Context>
+    <DataFormProvider>
       <Place />
-    </Context>
+    </DataFormProvider>
   )
 }
 
