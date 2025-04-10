@@ -2,6 +2,8 @@ const formQuestions = [
 	{
 		question: 'Selecciona un lugar a visitar'
 	},
+	{}, // the answer is taken from the answer to question 1
+	{}, // the answer is taken from the answer to question 1
 	{
 		question: '¿Cual es tu nombre?',
 		watchMessage: 'como nombre de usuario',

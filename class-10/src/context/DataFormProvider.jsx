@@ -1,5 +1,7 @@
-import DataFormContext from './data-form-context'
+import dataFormContext from './dataFormContext'
 import { useState } from 'react'
+
+const formAnswers = []
 
 function DataFormProvider({ children }) {
 	const [indexQuestionForm, setIndexQuestionForm] = useState(0)
@@ -9,11 +11,12 @@ function DataFormProvider({ children }) {
 	}
 
 	return (
-		<DataFormContext.Provider value={{
-			stateIndexQuestionForm
+		<dataFormContext.Provider value={{
+			stateIndexQuestionForm,
+			formAnswers
 		}}>
 			{children}
-		</DataFormContext.Provider>
+		</dataFormContext.Provider>
 	)
 }
 
