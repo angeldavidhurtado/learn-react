@@ -8,6 +8,7 @@ const formQuestions = [
 		question: '¿Cual es tu nombre?',
 		watchMessage: 'como nombre de usuario',
 		required: true,
+		type: 'text',
 		min: null,
 		max: null
 	},
@@ -15,6 +16,7 @@ const formQuestions = [
 		question: '¿Cuantas habitaciones quieres?',
 		watchMessage: 'habitaciones',
 		required: true,
+		type: 'number',
 		min: 1,
 		max: 10
 	},
@@ -22,6 +24,7 @@ const formQuestions = [
 		question: '¿Cuantas personas son?',
 		watchMessage: 'personas',
 		requiered: true,
+		type: 'number',
 		min: 1,
 		max: 7
 	},
@@ -29,6 +32,7 @@ const formQuestions = [
 		question: '¿Para cuantos días?',
 		watchMessage: 'días',
 		required: true,
+		type: 'number',
 		min: 1,
 		max: 7
 	},
