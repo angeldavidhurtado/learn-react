@@ -3,6 +3,7 @@ import dataFormContext from './../../context/dataFormContext'
 import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { Navigate } from 'react-router-dom'
+import FormSummary from './../../components/form-summary/FormSummary'
 
 function FormQuestions() {
 	const {
@@ -35,32 +36,35 @@ function FormQuestions() {
 	}
 
 	return (
-		<form onSubmit={handleSubmit(validateForm)}>
-			<p>{question.question}</p>
-			<input
-				type={question.type}
-				{...register('value', {
-					required: question.required,
-					min: question.min,
-					max: question.max
-				})}
-				autoFocus
-				autoComplete="off"
-			/>
-			<input type="submit" />
-			{
-				errors.value?.type == 'required' &&
-				<p>Por favor completa el campo</p>
-			}
-			{
-				errors.value?.type == 'min' &&
-				<p>Debe ser un número mayor</p>
-			}
-			{
-				errors.value?.type == 'max' &&
-				<p>Debe ser un número menor</p>
-			}
-		</form>
+		<>
+			<form onSubmit={handleSubmit(validateForm)}>
+				<p>{question.question}</p>
+				<input
+					type={question.type}
+					{...register('value', {
+						required: question.required,
+						min: question.min,
+						max: question.max
+					})}
+					autoFocus
+					autoComplete="off"
+				/>
+				<input type="submit" />
+				{
+					errors.value?.type == 'required' &&
+					<p>Por favor completa el campo</p>
+				}
+				{
+					errors.value?.type == 'min' &&
+					<p>Debe ser un número mayor</p>
+				}
+				{
+					errors.value?.type == 'max' &&
+					<p>Debe ser un número menor</p>
+				}
+			</form>
+			<FormSummary />	
+		</>
 	)
 }
 
