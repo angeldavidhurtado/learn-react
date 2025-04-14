@@ -25,6 +25,8 @@ function FormQuestions() {
 	} = useForm()
 
 	const validateForm = data => {
+		if (iQuestion + 1 == formQuestions.length)
+			return console.log('Imprimir')
 		stateIndexQuestionForm.set(iQuestion + 1)
 		formAnswers.push(data.value)
 		setFocus('value')
