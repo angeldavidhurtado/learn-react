@@ -1,19 +1,22 @@
 import dataFormContext from './dataFormContext'
 import { useState } from 'react'
 
-const formAnswers = []
-
 function DataFormProvider({ children }) {
 	const [indexQuestionForm, setIndexQuestionForm] = useState(0)
+	const [formAnswers, setFormAnswers] = useState([])
 	const stateIndexQuestionForm = {
 		value: indexQuestionForm,
 		set: setIndexQuestionForm
+	}
+	const stateFormAnswers = {
+		value: formAnswers,
+		set: setFormAnswers
 	}
 
 	return (
 		<dataFormContext.Provider value={{
 			stateIndexQuestionForm,
-			formAnswers
+			stateFormAnswers
 		}}>
 			{children}
 		</dataFormContext.Provider>

@@ -2,14 +2,14 @@ import formQuestions from './../../data/formQuestions'
 import dataFormContext from './../../context/dataFormContext'
 import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
-import { Navigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import FormSummary from './../../components/form-summary/FormSummary'
 import './FormQuestions.css'
 
 function FormQuestions() {
 	const {
 		stateIndexQuestionForm,
-		formAnswers
+		stateFormAnswers
 	} = useContext(dataFormContext)
 
 	const iQuestion = stateIndexQuestionForm.value
@@ -28,10 +28,17 @@ function FormQuestions() {
 
 	const validateForm = data => {
 		const value = question.type == 'number' ? Number(data.value) : data.value
-		formAnswers.push(value)
+		stateFormAnswers.set([...stateFormAnswers.value, value])
 		stateIndexQuestionForm.set(iQuestion + 1)
 		reset()
 		setFocus('value')
+	}
+
+	const navigate = useNavigate()
+	const goToHome = () => {
+		stateIndexQuestionForm.set(0)
+		stateFormAnswers.set([])
+		navigate('/')
 	}
 
 	return (
@@ -40,7 +47,13 @@ function FormQuestions() {
 				{
 					iQuestion == formQuestions.length
 					?
-					<div>Final</div>
+					<div className="end">
+						<p>¿Quieres modificar los datos o finalizar e imprimir tu pedido?</p>
+						<div className="options">
+							<button onClick={goToHome}>Volver</button>
+							<button>Imprimir</button>
+						</div>
+					</div>
 					:
 					<form onSubmit={handleSubmit(validateForm)}>
 						<p>{question.question}</p>

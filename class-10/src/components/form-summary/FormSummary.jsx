@@ -12,16 +12,16 @@ function FormSummary() {
 		'Personas',
 		'Días'
 	]
-	const { formAnswers } = useContext(dataFormContext)
+	const { stateFormAnswers } = useContext(dataFormContext)
 
-	let total = formAnswers[2]
-	if (formAnswers.length > 4)
-		for (let i = 4; i < formAnswers.length; i++)
-			total *= formAnswers[i]
+	let total = stateFormAnswers.value[2]
+	if (stateFormAnswers.value.length > 4)
+		for (let i = 4; i < stateFormAnswers.value.length; i++)
+			total *= stateFormAnswers.value[i]
 
 	return (
 		<div className="form-summary">
-			{formAnswers.map((answer, iAnswer) =>
+			{stateFormAnswers.value.map((answer, iAnswer) =>
 				iAnswer == 0
 				?
 				<div key={iAnswer}>

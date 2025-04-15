@@ -11,14 +11,12 @@ function Place() {
 	const { register, handleSubmit, formState: { errors } } = useForm()
 	const {
 		stateIndexQuestionForm,
-		formAnswers
+		stateFormAnswers
 	} = useContext(dataFormContext)
 
 	const onSubmit = data => {
 		const place = dataPlaces.find(place => place.name == data.placeName)
-		formAnswers.push(place.img)
-		formAnswers.push(place.name)
-		formAnswers.push(place.cost)
+		stateFormAnswers.set([place.img, place.name, place.cost])
 		stateIndexQuestionForm.set(3)
 		navigate('/form')
 	}
