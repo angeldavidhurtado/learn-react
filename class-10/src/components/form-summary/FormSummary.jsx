@@ -13,6 +13,11 @@ function FormSummary() {
 	]
 	const { formAnswers } = useContext(dataFormContext)
 
+	let total = formAnswers[2]
+	if (formAnswers.length > 4)
+		for (let i = 4; i < formAnswers.length; i++)
+			total *= formAnswers[i]
+
 	return (
 		<>
 			{formAnswers.map((answer, iAnswer) =>
@@ -27,6 +32,8 @@ function FormSummary() {
 					<p>{answer}</p>
 				</div>
 			)}
+			<h3>Total</h3>
+			{total}
 		</>
 	)
 }

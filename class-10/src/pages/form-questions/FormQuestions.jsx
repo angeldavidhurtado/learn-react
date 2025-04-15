@@ -26,7 +26,8 @@ function FormQuestions() {
 	} = useForm()
 
 	const validateForm = data => {
-		formAnswers.push(data.value)
+		const value = question.type == 'number' ? Number(data.value) : data.value
+		formAnswers.push(value)
 		stateIndexQuestionForm.set(iQuestion + 1)
 		reset()
 		setFocus('value')
