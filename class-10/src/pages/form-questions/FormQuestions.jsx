@@ -26,44 +26,47 @@ function FormQuestions() {
 	} = useForm()
 
 	const validateForm = data => {
-		if (iQuestion + 1 == formQuestions.length)
-			return console.log('Imprimir')
-		stateIndexQuestionForm.set(iQuestion + 1)
 		formAnswers.push(data.value)
-		setFocus('value')
+		stateIndexQuestionForm.set(iQuestion + 1)
 		reset()
-		console.log(formAnswers)
+		setFocus('value')
 	}
 
 	return (
 		<>
-			<form onSubmit={handleSubmit(validateForm)}>
-				<p>{question.question}</p>
-				<input
-					type={question.type}
-					{...register('value', {
-						required: question.required,
-						min: question.min,
-						max: question.max
-					})}
-					autoFocus
-					autoComplete="off"
-				/>
-				<input type="submit" />
-				{
-					errors.value?.type == 'required' &&
-					<p>Por favor completa el campo</p>
-				}
-				{
-					errors.value?.type == 'min' &&
-					<p>Debe ser un número mayor</p>
-				}
-				{
-					errors.value?.type == 'max' &&
-					<p>Debe ser un número menor</p>
-				}
-			</form>
-			<FormSummary />	
+			{
+				iQuestion == formQuestions.length
+				?
+				<div>Final</div>
+				:
+				<form onSubmit={handleSubmit(validateForm)}>
+					<p>{question.question}</p>
+					<input
+						type={question.type}
+						{...register('value', {
+							required: question.required,
+							min: question.min,
+							max: question.max
+						})}
+						autoFocus
+						autoComplete="off"
+					/>
+					<input type="submit" />
+					{
+						errors.value?.type == 'required' &&
+						<p>Por favor completa el campo</p>
+					}
+					{
+						errors.value?.type == 'min' &&
+						<p>Debe ser un número mayor</p>
+					}
+					{
+						errors.value?.type == 'max' &&
+						<p>Debe ser un número menor</p>
+					}
+				</form>
+			}
+			<FormSummary />
 		</>
 	)
 }

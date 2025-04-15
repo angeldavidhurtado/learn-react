@@ -16,8 +16,15 @@ function FormSummary() {
 	return (
 		<>
 			{formAnswers.map((answer, iAnswer) =>
+				iAnswer == 0
+				?
 				<div key={iAnswer}>
-					{answer} {iAnswer}
+					<img src={`/img/${answer}`} alt="" />
+				</div>
+				:
+				<div key={iAnswer}>
+					<p>{fields[iAnswer]}</p>
+					<p>{answer}</p>
 				</div>
 			)}
 		</>
