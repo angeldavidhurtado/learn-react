@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { Navigate } from 'react-router-dom'
 import FormSummary from './../../components/form-summary/FormSummary'
+import './FormQuestions.css'
 
 function FormQuestions() {
 	const {
@@ -34,41 +35,43 @@ function FormQuestions() {
 	}
 
 	return (
-		<>
-			{
-				iQuestion == formQuestions.length
-				?
-				<div>Final</div>
-				:
-				<form onSubmit={handleSubmit(validateForm)}>
-					<p>{question.question}</p>
-					<input
-						type={question.type}
-						{...register('value', {
-							required: question.required,
-							min: question.min,
-							max: question.max
-						})}
-						autoFocus
-						autoComplete="off"
-					/>
-					<input type="submit" />
-					{
-						errors.value?.type == 'required' &&
-						<p>Por favor completa el campo</p>
-					}
-					{
-						errors.value?.type == 'min' &&
-						<p>Debe ser un número mayor</p>
-					}
-					{
-						errors.value?.type == 'max' &&
-						<p>Debe ser un número menor</p>
-					}
-				</form>
-			}
+		<div className="form-questions">
+			<section className="questions">
+				{
+					iQuestion == formQuestions.length
+					?
+					<div>Final</div>
+					:
+					<form onSubmit={handleSubmit(validateForm)}>
+						<p>{question.question}</p>
+						<input
+							type={question.type}
+							{...register('value', {
+								required: question.required,
+								min: question.min,
+								max: question.max
+							})}
+							autoFocus
+							autoComplete="off"
+						/>
+						<input type="submit" />
+						{
+							errors.value?.type == 'required' &&
+							<p>Por favor completa el campo</p>
+						}
+						{
+							errors.value?.type == 'min' &&
+							<p>Debe ser un número mayor</p>
+						}
+						{
+							errors.value?.type == 'max' &&
+							<p>Debe ser un número menor</p>
+						}
+					</form>
+				}
+			</section>
 			<FormSummary />
-		</>
+		</div>
 	)
 }
 

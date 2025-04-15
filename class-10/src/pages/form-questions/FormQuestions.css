@@ -1,0 +1,40 @@
+.form-questions {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	justify-content: center;
+	gap: 20px;
+	padding: 20px;
+	max-width: 900px;
+	margin: auto;
+}
+
+
+
+
+/* -- -- form -- -- */
+
+.form-questions form {
+	max-width: 350px;
+	margin: auto;
+}
+
+.form-questions form > p {
+	margin-bottom: 10px;
+}
+
+.form-questions input {
+	border-radius: 7px 0 0 7px;
+}
+.form-questions input[type="submit"] {
+	border-radius: 0 7px 7px 0;
+	background: darkblue;
+	color: bisque;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+	.form-questions {
+		grid-template-columns: 1fr;
+		justify-items: center;
+	}
+}
