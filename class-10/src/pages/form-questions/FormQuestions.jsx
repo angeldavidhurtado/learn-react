@@ -41,6 +41,10 @@ function FormQuestions() {
 		navigate('/')
 	}
 
+	const print = () => {
+		window.print()
+	}
+
 	return (
 		<div className="form-questions">
 			<section className="questions">
@@ -51,7 +55,7 @@ function FormQuestions() {
 						<p>¿Quieres modificar los datos o finalizar e imprimir tu pedido?</p>
 						<div className="options">
 							<button onClick={goToHome}>Volver</button>
-							<button>Imprimir</button>
+							<button onClick={print}>Imprimir</button>
 						</div>
 					</div>
 					:
