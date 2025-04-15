@@ -1,0 +1,30 @@
+.form-summary {
+	width: fit-content;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 15px;
+	background: darkblue;
+	border-radius: 12px;
+}
+
+.form-summary img {
+	grid-column: span 2;
+	margin-bottom: 10px;
+	border-radius: 12px 12px 0 0;
+}
+
+.form-summary > div {
+	display: grid;
+	grid-template-columns: subgrid;
+	grid-column: span 2;
+}
+
+.form-summary > div:not(:first-child):not(:last-child) {
+	padding: 5px 15px;
+}
+
+.form-summary .total {
+	padding: 12px 15px 9px;
+	background: rgb(0, 0, 106);
+	border-radius: 0 0 12px 12px;
+}

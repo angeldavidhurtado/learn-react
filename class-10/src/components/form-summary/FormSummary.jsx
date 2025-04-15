@@ -1,5 +1,6 @@
 import dataFormContext from './../../context/dataFormContext'
 import { useContext } from 'react'
+import './FormSummary.css'
 
 function FormSummary() {
 	const fields = [
@@ -19,7 +20,7 @@ function FormSummary() {
 			total *= formAnswers[i]
 
 	return (
-		<>
+		<div className="form-summary">
 			{formAnswers.map((answer, iAnswer) =>
 				iAnswer == 0
 				?
@@ -32,9 +33,11 @@ function FormSummary() {
 					<p>{answer}</p>
 				</div>
 			)}
-			<h3>Total</h3>
-			{total}
-		</>
+			<div className="total">
+				<h3>Total</h3>
+				<span>{total}</span>
+			</div>
+		</div>
 	)
 }
 
