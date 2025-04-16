@@ -30,6 +30,17 @@
 	background: darkblue;
 	color: bisque;
 	cursor: pointer;
+	margin-bottom: 15px;
+}
+
+.form-questions .watch {
+	text-align: center;
+	background: green;
+	color: bisque;
+	padding: 10px 15px;
+	border-radius: 7px;
+	margin: 0 auto 10px;
+	width: fit-content;
 }
 
 @media screen and (max-width: 720px) {

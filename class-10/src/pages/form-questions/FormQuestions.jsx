@@ -73,6 +73,12 @@ function FormQuestions() {
 						/>
 						<input type="submit" />
 						{
+							watch('value') &&
+							<p className="watch">
+								{`${watch('value')} ${question.watchMessage}`}
+							</p>
+						}
+						{
 							errors.value?.type == 'required' &&
 							<p>Por favor completa el campo</p>
 						}
