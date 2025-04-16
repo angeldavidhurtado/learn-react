@@ -3,6 +3,9 @@ my-app/
 │   └── index.html
 │
 ├── src/
+│   ├── router/
+│   │   └── routes.js
+│   │
 │   ├── assets/
 │   │   ├── images/
 │   │   └── icons/
@@ -51,7 +54,7 @@ my-app/
 │   │   └── globals.css
 │   │
 │   ├── App.jsx   // rutas, layouts y lógica de UI
-│   └── main.jsx  // estilos (Bootstrap) y provider globales
+│   └── main.jsx  // estilos (Bootstrap), provider globales, renderiza el RouterProvider
 │
 ├── .gitignore
 ├── package.json

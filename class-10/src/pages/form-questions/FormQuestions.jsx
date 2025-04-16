@@ -84,11 +84,11 @@ function FormQuestions() {
 						}
 						{
 							errors.value?.type == 'min' &&
-							<p>Debe ser un número mayor</p>
+							<p>Mínimo {question.min}</p>
 						}
 						{
 							errors.value?.type == 'max' &&
-							<p>Debe ser un número menor</p>
+							<p>Máximo {question.max}</p>
 						}
 					</form>
 				}

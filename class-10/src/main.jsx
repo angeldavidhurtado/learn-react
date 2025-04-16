@@ -9,5 +9,5 @@ createRoot(document.getElementById('root')).render(
     <DataFormProvider>
       <App />
     </DataFormProvider>
-  </StrictMode>,
+  </StrictMode>
 )

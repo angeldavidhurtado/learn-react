@@ -25,6 +25,16 @@
 .form-questions input {
 	border-radius: 7px 0 0 7px;
 }
+
+.form-questions input[type="number"]::-webkit-outer-spin-button,
+.form-questions input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-questions input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .form-questions input[type="submit"] {
 	border-radius: 0 7px 7px 0;
 	background: darkblue;
@@ -57,6 +67,10 @@
 
 .form-questions .end {
 	text-align: center;
+}
+
+.form-questions p {
+	line-height: 25px;
 }
 
 .form-questions .end button {
