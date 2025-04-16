@@ -1,5 +1,5 @@
-import formQuestions from './../../data/formQuestions'
-import dataFormContext from './../../context/dataFormContext'
+import formQuestions from '@/data/formQuestions'
+import dataFormContext from '@/context/dataFormContext'
 import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { Navigate, useNavigate } from 'react-router-dom'
