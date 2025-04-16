@@ -1,4 +1,4 @@
-import dataFormContext from './../../context/dataFormContext'
+import dataFormContext from '@/context/dataFormContext'
 import { useContext } from 'react'
 import './FormSummary.css'
 

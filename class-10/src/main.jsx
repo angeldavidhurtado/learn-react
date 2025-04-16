@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import DataFormProvider from './context/DataFormProvider'
+import DataFormProvider from '@/context/DataFormProvider'
 import App from './App'
 import './main.css'
 
