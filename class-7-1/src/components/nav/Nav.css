@@ -1,0 +1,20 @@
+nav {
+	background: darkblue;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav a {
+	color: bisque;
+	text-decoration: none;
+	display: block;
+	padding: 10px 15px;
+}
+
+nav a.active {
+	background: bisque;
+	color: darkblue	;
+}
