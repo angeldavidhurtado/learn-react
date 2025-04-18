@@ -1,37 +1,37 @@
 .App {
-  display: flex;
-  flex-flow: column;
-  min-height: 100vh;
-  justify-content: center;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	min-height: 100vh;
 }
 
-.App > * {
-  width: fit-content;
-  margin: 0 auto 0 auto;
+h1,
+p {
+	text-align: center;
 }
 
-.App .box {
-  user-select: none;
-  cursor: pointer;
-  padding: 10px 13px 8px 13px;
-  font-size: 18px;
-  border-radius: 7px;
+.reyes {
+	width: 100%;
+	max-width: 900px;
+	margin: 10px auto 0 auto;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 20px;
 }
 
-.App img {
-  margin: 20px;
+.rey {
+	background: darkblue;
+	border-radius: 7px;
+	padding: 20px;
+	border: 2px solid bisque;
 }
 
-.App button {
-  padding: 10px 12px;
-  border-radius: 7px;
-  background-color: darkblue;
-  color: bisque;
-  cursor: pointer;
-  font-size: 16px;
+.rey img {
+	width: 100%;
 }
 
-.background-light {
-  background: bisque;
-  color: darkblue;
+.rey h3 {
+	margin-top: 20px;
+	text-align: center;
 }

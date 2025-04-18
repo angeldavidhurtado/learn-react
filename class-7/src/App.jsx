@@ -1,21 +1,16 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import Nav from './Nav'
-import Home from './Home'
-import King from './King'
+import Provider from './Context/Provider'
+import Lenguage from './Lenguage'
+import Text from './Text'
+import Buttons from './Buttons'
 import './App.css'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Nav />
-      <div className="margin-top">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/king/:kingName" element={<King />} />
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <Provider>
+      <Lenguage />
+      <Text />
+      <Buttons />
+    </Provider>
   )
 }
 

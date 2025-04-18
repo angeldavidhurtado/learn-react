@@ -1,38 +1,44 @@
-.App ul {
-	min-height: 100vh;
-	list-style: none;
+.App {
 	display: flex;
 	flex-flow: column;
-	gap: 20px;
 	justify-content: center;
-	padding: 20px;
+	min-height: 100vh;
 }
 
-.App li > * {
-	display: block;
-	margin: auto;
+h1,
+p {
 	text-align: center;
 }
 
-.App label {
-	margin-bottom: 5px;
-}
-
-.App input {
-	font-size: 18px;
-	outline: none;
-	padding: 20px;
-	border-radius: 7px;
-	background-color: darkblue;
-	color: bisque;
-	text-align: center;
-	cursor: default;
+.reyes {
 	width: 100%;
-	max-width: 250px;
+	max-width: 900px;
+	margin: 10px auto 0 auto;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 20px;
 }
 
-.App .edit {
-	background: bisque;
-	color: darkblue;
-	cursor: text;
+.rey {
+	background: darkblue;
+	border-radius: 7px;
+	padding: 20px;
+	border: 2px solid bisque;
+}
+
+.rey img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.rey h3 {
+	margin-top: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.background-transparent {
+	background: none;
+	border: 2px solid transparent;
 }

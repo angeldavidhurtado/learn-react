@@ -1,48 +1,65 @@
-import Activity1 from './Activity1'
-import Activity2 from './Activity2'
-import Activity3 from './Activity3'
-import Activity4 from './Activity4'
+import { useState } from 'react'
+import Cena from './Cena'
 import './App.css'
 
-const kings = [
-  {
-    name:"Atanagildo",
-    reign:15,
-    eatenCows:9
-  }, {
-    name:"Ervigio",
-    reign:7,
-    eatenCows:3
-  }, {
-    name:"Ataúlfo",
-    reign:5,
-    eatenCows:16
-  }, {
-    name:"Leogivildo",
-    reign:18,
-    eatenCows:3
-  }, {
-    name:"Sisebuto",
-    reign:9,
-    eatenCows:13
-  }, {
-    name:"Recesvinto",
-    reign:19,
-    eatenCows:11
-  }, {
-    name:"Teodorico",
-    reign:33,
-    eatenCows:12
-  }
-]
-
 function App() {
+  const [total, setTotal] = useState(0)
+
+  const reyes = [
+    {
+      nombre: "Atanagildo",
+      color: "darkolivegreen",
+      precio: 178
+    }, {
+      nombre: "Ervigio",
+      color: "crimson",
+      precio: 169
+    }, {
+      nombre: "Ataúlfo",
+      color: "peru",
+      precio: 81
+    }, {
+      nombre: "Leogivildo",
+      color: "darkmagenta",
+      precio: 126
+    }, {
+      nombre: "Recesvinto",
+      color: "royalblue",
+      precio: 141
+    }, {
+      nombre: "Sisebuto",
+      color: "teal",
+      precio: 69
+    }
+  ]
+
+  let king
+
   return (
     <div className="App">
-      <Activity1 kings={kings} />
-      <Activity2 kings={kings} />
-      <Activity3 kings={kings} />
-      <Activity4 kings={kings} />
+      <h1>Cena con un rey</h1>
+      <p>Total: <span>{total}</span></p>
+
+      <div className="kings">      
+        {(()=>{king = reyes[0]})()}
+        <Cena name={king.nombre} price={king.precio} action={setTotal} color={king.color} />
+
+        {(()=>{king = reyes[1]})()}
+        <Cena name={king.nombre} price={king.precio} action={setTotal} color={king.color} />
+
+        {(()=>{king = reyes[2]})()}
+        <Cena name={king.nombre} price={king.precio} action={setTotal} color={king.color} />
+
+        {(()=>{king = reyes[3]})()}
+        <Cena name={king.nombre} price={king.precio} action={setTotal} color={king.color} />
+
+        {(()=>{king = reyes[4]})()}
+        <Cena name={king.nombre} price={king.precio} action={setTotal} color={king.color} />
+
+        {(()=>{king = reyes[5]})()}
+        <Cena name={king.nombre} price={king.precio} action={setTotal} color={king.color} />
+      </div>
+
     </div>
   )
 }

@@ -1,33 +1,37 @@
 .App {
-	min-height: 100vh;
-	display: flex;
-	flex-flow: column;
-	gap: 20px;
-	justify-content: center;
-	padding: 20px;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  justify-content: center;
 }
 
-.App .msg {
-	display: flex;
-	flex-flow: column;
-	background: bisque;
-	padding: 20px 20px 0 20px;
-	margin: auto;
-	color: darkblue;
-	border-radius: 7px;
+.App > * {
+  width: fit-content;
+  margin: 0 auto 0 auto;
 }
 
-.App .darkviolet { color: darkviolet; }
-.App .green { color: green; }
+.App .box {
+  user-select: none;
+  cursor: pointer;
+  padding: 10px 13px 8px 13px;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+.App img {
+  margin: 20px;
+}
 
 .App button {
-	padding: 10px 15px;
-	font-size: 16px;
-	border-radius: 7px;
-	background: darkblue;
-	color: bisque;
-	cursor: pointer;
-	width: fit-content;
-	margin: 15px auto -20px auto;
-	box-shadow: 0 0 13px rgba(0, 0, 139, 0.254);
+  padding: 10px 12px;
+  border-radius: 7px;
+  background-color: darkblue;
+  color: bisque;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.background-light {
+  background: bisque;
+  color: darkblue;
 }

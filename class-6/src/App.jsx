@@ -1,16 +1,13 @@
-import Provider from './Context/Provider'
-import Lenguage from './Lenguage'
-import Text from './Text'
-import Buttons from './Buttons'
+import Users from './Users'
+import Joke from './Joke'
 import './App.css'
 
 function App() {
   return (
-    <Provider>
-      <Lenguage />
-      <Text />
-      <Buttons />
-    </Provider>
+    <div className="App">
+      <Users />
+      <Joke />
+    </div>
   )
 }
 

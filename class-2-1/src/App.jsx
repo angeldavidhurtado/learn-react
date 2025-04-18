@@ -1,55 +1,52 @@
-import { useState } from 'react'
+import img0 from './assets/reyes/rey_incognito.png'
+import img1 from './assets/reyes/rey_sisebuto.png'
+import img2 from './assets/reyes/rey_leogivildo.png'
+import img3 from './assets/reyes/rey_atanagildo.png'
 import './App.css'
 
+
 function App() {
-  const [colombia, setColombia] = useState(0)
-  const [euro, setEuro] = useState(0)
-  const [argentina, setArgentina] = useState(0)
-  const [mexico, setMexico] = useState(0)
-  const [dolar, setDolar] = useState(0)
+  const reyes = [
+    {nombre: 'Incognito', img: img0},
+    {nombre: 'Sisebuto', img: img1},
+    {nombre: 'Leogivildo', img: img2},
+    {nombre: 'Atanagildo', img: img3}
+  ]
 
-  const cambio = e => {
-    const valorDeCambio = {
-      pesoColombiano: 1,
-      euro: 0.0002201,
-      pesoArgentino: 0.0261,
-      pesoMexicano: 0.0051,
-      dolar: 0.000251
-    }
+  const changeImg = e => {
+    const img = e.target
+    if (img.src.includes('incognito'))
+      return img.style.visibility = 'hidden'
 
-    const value = e.target.value
+    img.src = reyes[0].img
+    img.alt = reyes[0].nombre
+    img.parentNode.classList.add('background-transparent')
+  }
 
-    setColombia(value)
-    setEuro( (value*valorDeCambio.euro).toFixed(2) )
-    setArgentina( (value*valorDeCambio.pesoArgentino).toFixed(2) )
-    setMexico( (value*valorDeCambio.pesoMexicano).toFixed(2) )
-    setDolar( (value*valorDeCambio.dolar).toFixed(2) )
+  const changeText = e => {
+    const text = e.target
+    if (text.innerText == 'Visto')
+      text.style.visibility = 'hidden'
+    else
+      text.innerText = 'Visto'
   }
 
   return (
     <div className="App">
-      <ul>
-        <li>
-          <label htmlFor="colombia">Peso Colombiano</label>
-          <input value={colombia} onChange={cambio} className="edit" id="colombia" type="number" />
-        </li>
-        <li>
-          <label htmlFor="euro">Euro</label>
-          <input value={euro} id="euro" type="number" readOnly />
-        </li>
-        <li>
-          <label htmlFor="argentina">Peso Argentino</label>
-          <input value={argentina} id="argentina" type="number" readOnly />
-        </li>
-        <li>
-          <label htmlFor="mexico">Peso Mexico</label>
-          <input value={mexico} id="mexico" type="number" readOnly />
-        </li>
-        <li>
-          <label htmlFor="dolar">Dólar</label>
-          <input value={dolar} id="dolar" type="number" readOnly />
-        </li>
-      </ul>
+      <div className="reyes">
+        <div className="rey">
+          <img onClick={changeImg} src={reyes[1].img} alt={`Rey ${reyes[1].nombre}`} />
+          <h3 onClick={changeText}>{reyes[1].nombre}</h3>
+        </div>
+        <div className="rey">
+          <img onClick={changeImg} src={reyes[2].img} alt={`Rey ${reyes[2].nombre}`} />
+          <h3 onClick={changeText}>{reyes[2].nombre}</h3>
+        </div>
+        <div className="rey">
+          <img onClick={changeImg} src={reyes[3].img} alt={`Rey ${reyes[3].nombre}`} />
+          <h3 onClick={changeText}>{reyes[3].nombre}</h3>
+        </div>
+      </div>
     </div>
   )
 }
