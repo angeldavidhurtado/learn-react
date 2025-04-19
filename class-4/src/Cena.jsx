@@ -1,4 +1,5 @@
 import './Cena.css'
+const baseURL = import.meta.env.BASE_URL
 
 function Cena({ name="Anonymous", price=0, action=()=>{}, color }) {
 	const runAction = e => {
@@ -12,7 +13,7 @@ function Cena({ name="Anonymous", price=0, action=()=>{}, color }) {
 	return (
 		<div className="Cena" style={{background: color}}>
 			<h2>Rey {name}</h2>
-			<img src={`/reyes/rey_${quitarAcentos(name.toLowerCase())}.png`} alt={`Rey ${name}`} />
+			<img src={`${baseURL}/reyes/rey_${quitarAcentos(name.toLowerCase())}.png`} alt={`Rey ${name}`} />
 			<p>Precio: <span>{price}</span></p>
 			<button onClick={runAction}>Comprar</button>
 		</div>
