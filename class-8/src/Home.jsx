@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Home.css'
+const baseURL = import.meta.env.BASE_URL
 
 function Home() {
 	const kings = ['Atanagildo', 'Ervigio', 'Sisebuto', 'Ataulfo', 'Leogivildo', 'Recesvinto']
@@ -11,7 +12,7 @@ function Home() {
 				return (
 					<Link key={kingLower} to={`/king/${kingLower}`}>
 						<img
-							src={`/kings/rey_${kingLower}.png`}
+							src={`${baseURL}/kings/rey_${kingLower}.png`}
 							alt={king}
 						/>
 					</Link>

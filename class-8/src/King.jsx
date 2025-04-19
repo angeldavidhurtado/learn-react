@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import './King.css'
+const baseURL = import.meta.env.BASE_URL
 
 function King() {
 	const {kingName} = useParams()
@@ -7,7 +8,7 @@ function King() {
 
 	return (
 		<div className="king-name">
-			<img src={`/kings/rey_${kingName}.png`} alt={displayName} />
+			<img src={`${baseURL}/kings/rey_${kingName}.png`} alt={displayName} />
 			<h1>{displayName}</h1>
 		</div>
 	)

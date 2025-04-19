@@ -1,6 +1,7 @@
 import Context from './Context/Context'
 import { useContext, useEffect } from 'react'
 import './Lenguage.css'
+const baseURL = import.meta.env.BASE_URL
 
 function Lenguage() {
 	const {setData} = useContext(Context)
@@ -17,13 +18,13 @@ function Lenguage() {
 	return (
 		<div className="Lenguage">
 			<button onClick={() => changeLenguage('es')}>
-				<img src="/img/spain.jpg" alt="" />
+				<img src={`${baseURL}/img/spain.jpg`} alt="" />
 			</button>
 			<button onClick={() => {changeLenguage('en')}}>
-				<img src="/img/uk.png" alt="" />
+				<img src={`${baseURL}/img/uk.png`} alt="" />
 			</button>
 			<button onClick={() => {changeLenguage('fr')}}>
-				<img src="/img/francia.png" alt="" />
+				<img src={`${baseURL}/img/francia.png`} alt="" />
 			</button>
 		</div>
 	)
