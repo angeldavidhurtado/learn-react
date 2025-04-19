@@ -1,6 +1,7 @@
 import dataFormContext from '@/context/dataFormContext'
 import { useContext } from 'react'
 import './FormSummary.css'
+const baseUrl = import.meta.env.BASE_URL
 
 function FormSummary() {
 	const fields = [
@@ -25,7 +26,7 @@ function FormSummary() {
 				iAnswer == 0
 				?
 				<div key={iAnswer}>
-					<img src={`/img/${answer}`} alt="" />
+					<img src={`${baseUrl}/img/${answer}`} alt="" />
 				</div>
 				:
 				<div key={iAnswer}>

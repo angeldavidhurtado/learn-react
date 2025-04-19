@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { AuthContext } from './App'
 import dataTouristPlaces from './dataTouristPlaces'
 import './SiteDetail.css'
+const baseUrl = import.meta.env.BASE_URL
 
 function SiteDetail() {
 	const { name } = useParams()
@@ -30,7 +31,7 @@ function SiteDetail() {
 					</button>
 					<button className="back" onClick={()=>navigate(`/area/${place.area}`)}>Volver</button>
 				</div>
-				<img src={`/img/${place.img}`} alt="" />
+				<img src={`${baseUrl}/img/${place.img}`} alt="" />
 			</div>
 		</div>
 	)

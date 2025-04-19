@@ -3,6 +3,7 @@ import { AuthContext } from './App'
 import dataTouristPlaces from './dataTouristPlaces'
 import { useParams, Link } from 'react-router-dom'
 import './Places.css'
+const baseUrl = import.meta.env.BASE_URL
 
 function Places() {
 	const { area } = useParams()
@@ -16,7 +17,7 @@ function Places() {
 				const isInTripPlan = plansToBuy.state.placesBuy.some(iPlace => iPlace.name == place.name)
 				return (
 					<div key={place.name} className="place">
-						<img src={`/img/${place.img}`} alt={place.name} />
+						<img src={`${baseUrl}/img/${place.img}`} alt={place.name} />
 						<div className="content">
 							<h2>{place.name}</h2>
 							<p>{place.location}</p>

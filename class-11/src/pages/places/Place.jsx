@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Place.css'
+const baseUrl = import.meta.env.BASE_URL
 
 function Place() {
 	const navigate = useNavigate()
@@ -47,7 +48,7 @@ function Place() {
 						/>
 						<h2>{place.name}</h2>
 						<span className="cost">${place.cost}</span>
-						<img src={`/img/${place.img}`} alt={place.name} />
+						<img src={`${baseUrl}/img/${place.img}`} alt={place.name} />
 					</label>
 				)}
 			</div>

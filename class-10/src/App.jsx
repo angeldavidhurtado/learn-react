@@ -63,7 +63,9 @@ function App() {
           <Route path="/login" element={<Navigate to="/" replace />} />
         </Route>
 
-        // Si la app crece se podrian combinar PrivateRoutes y LayoutWithNav en uno solo por ejemplo PrivateRoutesWithNav o similar
+        // Si la app crece se podrian combinar PrivateRoutes
+        // y LayoutWithNav en uno solo por ejemplo
+        // PrivateRoutesWithNav o similar
         <Route element={<PrivateRoutes />}>
           <Route element={<LayoutWithNav />}>
             <Route path="/area/:area" element={<Places />} />
