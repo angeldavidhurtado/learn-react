@@ -1,16 +1,16 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Place from '@/pages/places/Place'
 import FormQuestions from './pages/form-questions/FormQuestions'
 const baseUrl = import.meta.env.BASE_URL
 
 function App() {
 	return (
-		<BrowserRouter basename={baseUrl}>
+		<HashRouter>
 			<Routes>
 				<Route path="/" element={<Place />} />
 				<Route path="/form" element={<FormQuestions />} />
 			</Routes>
-		</BrowserRouter>
+		</HashRouter>
 	)
 }
 

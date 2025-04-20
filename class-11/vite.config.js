@@ -4,7 +4,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/learn-react/class-11',
+  base: '/learn-react/class-11/',
   plugins: [react()],
   resolve: {
     alias: {

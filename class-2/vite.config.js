@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/learn-react/class-2',
+  base: '/learn-react/class-2/',
   plugins: [react()],
 })
