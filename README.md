@@ -1,6 +1,6 @@
 # 🚀 Me enfoqué en React.js para aportar desde el primer día.
 
-Para fortalecer esta especialización, realicé un curso completo de React.js. Al terminar el proceso, organicé y desplegué todas mis prácticas en el presente monorepositorio, el cual abarca desde los fundamentos de React hasta conceptos clave como hooks, routing, manejo de formularios y buenas prácticas de desarrollo moderno.
+Para fortalecer esta especialización, realicé un curso completo de React.js. Al terminar el proceso, organicé y desplegué todas mis prácticas en este [monorepositorio](https://github.com/angeldavidhurtado/learn-react), el cual abarca desde los fundamentos de React hasta conceptos clave como hooks, routing, manejo de formularios y buenas prácticas de desarrollo moderno.
 
 <br>
 
