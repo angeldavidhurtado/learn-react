@@ -4,10 +4,10 @@ Para fortalecer esta especialización, realicé un curso completo de React.js. A
 
 <br>
 
-## 🧠 ¿Qué encontrarás aquí?
+## 🔍 ¿Qué encontrarás aquí?
 
 | Práctica | Temas abordados | Código fuente | Sitio web |
-| --- | -------- | ------ | --- |
+| --- | --- | --- | --- |
 | `1` | Hola mundo | [Ver](https://github.com/angeldavidhurtado/learn-react/tree/main/class-1) | [Visitar](https://angeldavidhurtado.github.io/learn-react/class-1/) |
 | `2` | `useRef`, `target`, eventos y funciones | [Ver](https://github.com/angeldavidhurtado/learn-react/tree/main/class-2) | [Visitar](https://angeldavidhurtado.github.io/learn-react/class-2/) |
 | `2-1` | Práctica 2 (continuación) | [Ver](https://github.com/angeldavidhurtado/learn-react/tree/main/class-2-1) | [Visitar](https://angeldavidhurtado.github.io/learn-react/class-2-1/) |
@@ -35,11 +35,16 @@ Hice este proyecto por **iniciativa propia** para:
 
 <br>
 
-## 👨‍💻 ¿Quién soy?
-Soy [Ángel David Hurtado | React Developer](https://angeldavidhurtado.github.io/), apasionado por el desarrollo web, el código limpio, y la mejora constante. Además de estar enfocado en React.js para aportar desde el primer día en un equipo de desarrollo profesional.
+## 💛 Agradecimientos
+* Primero agradezco a Dios por darme la oportunidad y la claridad de seguir este camino profesional.
+* A mi familia, por su apoyo incondicional, su paciencia y por creer siempre en mí.  
+* Al [curso de React.js del youtuber Jab](https://www.youtube.com/playlist?list=PLRM7PpbqqStKo-NiCuzuYwewZmd9b-EZ9), el cual fue fundamental para fortalecer mis habilidades y entender en profundidad los conceptos esenciales de esta tecnología.
+
+<br>
+
+## 🙋‍♂️ ¿Quién soy?
+Soy [Ángel David Hurtado | React Developer](https://angeldavidhurtado.github.io/), apasionado por el desarrollo web, el código limpio, y la mejora constante.
 
 **Mi objetivo:** Construir productos web que funcionen, se vean bien y escalen con calidad.
 
-🚀 Estoy buscando mi primera oportunidad profesional como React Developer, donde pueda seguir aprendiendo, aportar valor real y crecer junto a un equipo.
-
-👉 [Descubre mi portafolio y todo lo que puedo aportar como React Developer](https://angeldavidhurtado.github.io)
+💼✨ [Explora mi portafolio y conoce más sobre mí](https://angeldavidhurtado.github.io)
