@@ -1,6 +1,6 @@
 # 🚀 Me enfoqué en React.js para aportar desde el primer día.
 
-Para fortalecer esta especialización, realicé un curso completo de React.js. Al terminar el proceso, organicé y desplegué todas mis prácticas en un monorepo, el cual abarca desde los fundamentos de React hasta conceptos clave como hooks, routing, manejo de formularios y buenas prácticas de desarrollo moderno.
+Para fortalecer esta especialización, realicé un curso completo de React.js. Al terminar el proceso, organicé y desplegué todas mis prácticas en el presente monorepositorio, el cual abarca desde los fundamentos de React hasta conceptos clave como hooks, routing, manejo de formularios y buenas prácticas de desarrollo moderno.
 
 <br>
 
@@ -37,8 +37,9 @@ Hice este proyecto por **iniciativa propia** para:
 
 ## 💛 Agradecimientos
 * Primero agradezco a Dios por darme la oportunidad y la claridad de seguir este camino profesional.
-* A mi familia, por su apoyo incondicional, su paciencia y por creer siempre en mí.  
+* A mi familia, por ser mi fuente de inspiración, por su apoyo incondicional y por ser el pilar que me ha permitido llegar hasta donde estoy.
 * Al [curso de React.js del youtuber Jab](https://www.youtube.com/playlist?list=PLRM7PpbqqStKo-NiCuzuYwewZmd9b-EZ9), el cual fue fundamental para fortalecer mis habilidades y entender en profundidad los conceptos esenciales de esta tecnología.
+* A ChatGPT y la IA por permitirme acelerar mi aprendizaje y entender conceptos con un mayor grado de detalle.
 
 <br>
 
@@ -47,4 +48,4 @@ Soy [Ángel David Hurtado | React Developer](https://angeldavidhurtado.github.io
 
 **Mi objetivo:** Construir productos web que funcionen, se vean bien y escalen con calidad.
 
-💼✨ [Explora mi portafolio y conoce más sobre mí](https://angeldavidhurtado.github.io)
+💼✨ [Explora mi portafolio y conoce más sobre mi trabajo](https://angeldavidhurtado.github.io)

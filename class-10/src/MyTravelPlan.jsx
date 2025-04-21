@@ -22,7 +22,7 @@ function MyTravelPlan() {
 						}>Anular</button>
 					</li>
 				)
-				: <li><p>No has seleccionado lugares</p></li>
+				: <li><p>No has seleccionado lugares aún</p></li>
 				}
 			</ul>
 			<p className="cost">Precio total: ${plansToBuy.state.total}</p>

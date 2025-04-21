@@ -1,10 +1,6 @@
 const initialStatePlnasToBuy = {
-	placesBuy: [
-		{ name:'Córdoba', cost:85 },
-		{ name:'Mendoza', cost:71 },
-		{ name:'La cumbrecita', cost:83 }
-	],
-	total:299
+	placesBuy: [],
+	total: 0
 }
 
 const type = {

@@ -5,7 +5,7 @@ const formQuestions = [
 	{}, // the answer is taken from the answer to question 1
 	{}, // the answer is taken from the answer to question 1
 	{
-		question: '¿Cual es tu nombre?',
+		question: '¿Cuál es tu nombre?',
 		watchMessage: 'como nombre de usuario',
 		required: true,
 		type: 'text',
@@ -13,7 +13,7 @@ const formQuestions = [
 		max: null
 	},
 	{
-		question: '¿Cuantas habitaciones quieres?',
+		question: '¿Cuántas habitaciones quieres?',
 		watchMessage: 'habitaciones',
 		required: true,
 		type: 'number',
@@ -21,7 +21,7 @@ const formQuestions = [
 		max: 10
 	},
 	{
-		question: '¿Cuantas personas son?',
+		question: '¿Cuántas personas son?',
 		watchMessage: 'personas',
 		requiered: true,
 		type: 'number',
@@ -29,7 +29,7 @@ const formQuestions = [
 		max: 7
 	},
 	{
-		question: '¿Para cuantos días?',
+		question: '¿Para cuántos días?',
 		watchMessage: 'días',
 		required: true,
 		type: 'number',
