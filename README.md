@@ -48,4 +48,4 @@ Soy [Ángel David Hurtado | React Developer](https://angeldavidhurtado.github.io
 
 **Mi objetivo:** Construir productos web que funcionen, se vean bien y escalen con calidad.
 
-💼✨ [Explora mi portafolio y conoce más sobre mi trabajo](https://angeldavidhurtado.github.io)
+💼✨ [Da clic para conocer más sobre mi trabajo](https://angeldavidhurtado.github.io)
