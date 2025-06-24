@@ -1,10 +1,13 @@
-# 🚀 Me enfoqué en React.js para aportar desde el primer día.
+<h1 align="center">Dominando React.js/h1>
+<p align="center">Prácticas profesionales desde los fundamentos hasta SPA</p>
+
+<br>
 
 Para fortalecer esta especialización, realicé un curso completo de React.js. Al terminar el proceso, organicé y desplegué todas mis prácticas en este [monorepositorio](https://github.com/angeldavidhurtado/learn-react), el cual abarca desde los fundamentos de React hasta conceptos clave como hooks, routing, manejo de formularios y buenas prácticas de desarrollo moderno.
 
 <br>
 
-## 🔍 ¿Qué encontrarás aquí?
+## ¿Qué encontrarás aquí?
 
 | Práctica | Temas abordados | Código fuente | Sitio web |
 | --- | --- | --- | --- |
@@ -26,7 +29,7 @@ Para fortalecer esta especialización, realicé un curso completo de React.js. A
 
 <br>
 
-## 💡 ¿Por qué hice este proyecto?
+## ¿Por qué hice este proyecto?
 Hice este proyecto por **iniciativa propia** para:
 * Mejorar mi capacidad de aprendizaje autónomo
 * Consolidar mis habilidades como React Developer
@@ -35,17 +38,12 @@ Hice este proyecto por **iniciativa propia** para:
 
 <br>
 
-## 💛 Agradecimientos
+## Agradecimientos
 * Primero agradezco a Dios por darme la oportunidad y la claridad de seguir este camino profesional.
 * A mi familia, por ser mi fuente de inspiración, por su apoyo incondicional y por ser el pilar que me ha permitido llegar hasta donde estoy.
 * Al [curso de React.js del youtuber Jab](https://www.youtube.com/playlist?list=PLRM7PpbqqStKo-NiCuzuYwewZmd9b-EZ9), el cual fue fundamental para fortalecer mis habilidades y entender en profundidad los conceptos esenciales de esta tecnología.
 * A ChatGPT y la IA por permitirme acelerar mi aprendizaje y entender conceptos con un mayor grado de detalle.
 
 <br>
-
-## 🙋‍♂️ ¿Quién soy?
-Soy [Ángel David Hurtado | React Developer](https://angeldavidhurtado.github.io/), apasionado por el desarrollo web, el código limpio, y la mejora constante.
-
-**Mi objetivo:** Construir productos web que funcionen, se vean bien y escalen con calidad.
 
 💼✨ [Da clic para conocer más sobre mi trabajo](https://angeldavidhurtado.github.io)
