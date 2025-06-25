@@ -1,4 +1,4 @@
-<h1 align="center">Dominando React.js</h1>
+<h1 align="center">Aprendiendo React</h1>
 <p align="center">Prácticas profesionales desde los fundamentos hasta SPA</p>
 
 <br>
