@@ -1,3 +1,5 @@
+<br>
+
 <h1 align="center">Aprendiendo React</h1>
 <p align="center">Prácticas profesionales desde los fundamentos hasta SPA</p>
 
@@ -47,3 +49,5 @@ Hice este proyecto por **iniciativa propia** para:
 <br>
 
 💼✨ [Da clic para conocer más sobre mi trabajo](https://angeldavidhurtado.github.io)
+
+<br>
